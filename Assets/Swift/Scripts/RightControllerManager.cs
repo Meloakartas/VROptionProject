@@ -1,13 +1,22 @@
-using Photon.Pun;
+﻿using Photon.Pun;
 using UnityEngine;
 using Valve.VR;
 
 public class RightControllerManager : MonoBehaviourPunCallbacks
 {
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
     private GameObject grabbedObject;
+
+    private bool isControllerInside = false;
+=======
     public GameObject VRCamera;
     public GameObject CameraRig;
-    private bool isControllerInside = false;
+>>>>>>> Stashed changes
+=======
+    public GameObject VRCamera;
+    public GameObject CameraRig;
+>>>>>>> Stashed changes
     private GameObject controller;
 
     public delegate void OnGrabPressed(GameObject controller);
@@ -15,8 +24,6 @@ public class RightControllerManager : MonoBehaviourPunCallbacks
 
     public delegate void OnGrabReleased(GameObject controller);
     public static event OnGrabReleased onGrabReleased;
-
-    private bool isOnTopView = false;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +41,8 @@ public class RightControllerManager : MonoBehaviourPunCallbacks
     {
         if (!gameObject.transform.parent.GetComponent<PhotonView>().IsMine) return;
 
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
         if (SteamVR_Actions._default.GrabPinch.GetStateDown(SteamVR_Input_Sources.RightHand) && grabbedObject)
         {
             GrabSelectedObject(controller);
@@ -41,8 +50,9 @@ public class RightControllerManager : MonoBehaviourPunCallbacks
         if (SteamVR_Actions._default.GrabPinch.GetStateUp(SteamVR_Input_Sources.RightHand) && grabbedObject)
         {
             UngrabSelectedObject(controller);
-        }
-
+=======
+=======
+>>>>>>> Stashed changes
         if (SteamVR_Actions._default.TopView.GetStateUp(SteamVR_Input_Sources.RightHand))
         {
             if (isOnTopView)
@@ -60,46 +70,10 @@ public class RightControllerManager : MonoBehaviourPunCallbacks
                 CameraRig.transform.position = currentPosition;
             }
             isOnTopView = !isOnTopView;
-        }
-    }
-
-    void GrabSelectedObject(GameObject controller)
-    {
-        Debug.Log("Grabbing object with controller : " + controller.name);
-        FixedJoint fx = controller.AddComponent<FixedJoint>();
-        fx.breakForce = 20000;
-        fx.breakTorque = 20000;
-        fx.connectedBody = grabbedObject.GetComponent<Rigidbody>();
-    }
-
-    void UngrabSelectedObject(GameObject controller)
-    {
-        Debug.Log("Ungrabbing object with controller : " + controller.name);
-        FixedJoint fx = controller.GetComponent<FixedJoint>();
-        if (fx)
-        {
-            fx.connectedBody.GetComponent<Rigidbody>().velocity = controller.GetComponent<SteamVR_Behaviour_Pose>().GetVelocity()*2;
-            fx.connectedBody.GetComponent<Rigidbody>().angularVelocity = controller.GetComponent<SteamVR_Behaviour_Pose>().GetAngularVelocity()*2;
-            fx.connectedBody = null;
-            Destroy(controller.GetComponent<FixedJoint>());
-        }
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if(other.tag == "Grabbable")
-        {
-            Debug.Log("Triggered a grabbable object : " + controller.name);
-            grabbedObject = other.gameObject;
-        }
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        if (other.tag == "Grabbable")
-        {
-            Debug.Log("Exited a grabbable object : " + controller.name);
-            grabbedObject = null;
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
         }
     }
 }
