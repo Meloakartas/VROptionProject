@@ -39,10 +39,10 @@
     <meta property="og:image" content="https://avatars1.githubusercontent.com/u/19528426?s=400&amp;v=4" /><meta property="og:site_name" content="GitHub" /><meta property="og:type" content="object" /><meta property="og:title" content="iskydive/VROptionProject" /><meta property="og:url" content="https://github.com/iskydive/VROptionProject" /><meta property="og:description" content="Projet de l&#39;option VR qui est géniale. Contribute to iskydive/VROptionProject development by creating an account on GitHub." />
 
   <link rel="assets" href="https://github.githubassets.com/">
-  <link rel="web-socket" href="wss://live.github.com/_sockets/VjI6NDg3MDA3NzU4OjNiODU1ZWVmN2M4ODNlZTZlZDQ3OWJhNjdhOWRlODU4N2YxZDhmNmEyY2QwNWYyYjBjN2I0NmVlMDgyZWNmNTM=--3261638a77fc89111323aea07f072581a4d44949">
+  <link rel="web-socket" href="wss://live.github.com/_sockets/VjI6NDg3MDA3NzU4OmFkOWUyYzljOTM2NTA0ZmFiYWMzNzFmZDEzZjIzM2QzYjk4YjM5NDc2NzZlOTllOTMyMjU0ZGQxYTI1MWE5ODQ=--01d1a4d9c9e757ef412ec07fc11d39f5c8a840fa">
   <link rel="sudo-modal" href="/sessions/sudo_modal">
 
-    <meta name="request-id" content="DD89:39DD:6459468:9705A2E:5E1C83E6" data-pjax-transient>
+    <meta name="request-id" content="DD9A:340A8:66D6C25:9A8CA69:5E1C8492" data-pjax-transient>
 
 
 
@@ -54,7 +54,7 @@
     <meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
     <meta name="google-site-verification" content="GXs5KoUUkNCoaAZn7wPN-t01Pywp9M3sEjnt_3_ZWPc">
 
-    <meta name="octolytics-host" content="collector.githubapp.com" /><meta name="octolytics-app-id" content="github" /><meta name="octolytics-event-url" content="https://collector.githubapp.com/github-external/browser_event" /><meta name="octolytics-dimension-request_id" content="DD89:39DD:6459468:9705A2E:5E1C83E6" /><meta name="octolytics-dimension-region_edge" content="ams" /><meta name="octolytics-dimension-region_render" content="iad" /><meta name="octolytics-dimension-ga_id" content="" class="js-octo-ga-id" /><meta name="octolytics-dimension-visitor_id" content="4629067503542429790" /><meta name="octolytics-actor-id" content="19528426" /><meta name="octolytics-actor-login" content="iskydive" /><meta name="octolytics-actor-hash" content="d727b759b8a0e9bb0f3fd6868a0cb034ca5f3694a831a9e5c29892680786b485" />
+    <meta name="octolytics-host" content="collector.githubapp.com" /><meta name="octolytics-app-id" content="github" /><meta name="octolytics-event-url" content="https://collector.githubapp.com/github-external/browser_event" /><meta name="octolytics-dimension-request_id" content="DD9A:340A8:66D6C25:9A8CA69:5E1C8492" /><meta name="octolytics-dimension-region_edge" content="ams" /><meta name="octolytics-dimension-region_render" content="iad" /><meta name="octolytics-dimension-ga_id" content="" class="js-octo-ga-id" /><meta name="octolytics-dimension-visitor_id" content="4629067503542429790" /><meta name="octolytics-actor-id" content="19528426" /><meta name="octolytics-actor-login" content="iskydive" /><meta name="octolytics-actor-hash" content="d727b759b8a0e9bb0f3fd6868a0cb034ca5f3694a831a9e5c29892680786b485" />
 
 <meta name="analytics-location" content="/&lt;user-name&gt;/&lt;repo-name&gt;/blob/show" data-pjax-transient="true" />
 
@@ -75,7 +75,7 @@
 
       <meta name="expected-hostname" content="github.com">
 
-      <meta name="js-proxy-site-detection-payload" content="ZjUwYTBiMDliYjYwMGVhNGQwYTJlMWQxZGQ3NGMzMTU2YjBkOTlkYmJmMzI5Njk3N2MyZDk2NmMzNzA2MGJmYXx7InJlbW90ZV9hZGRyZXNzIjoiMTk1LjI1Ljg2LjE2MSIsInJlcXVlc3RfaWQiOiJERDg5OjM5REQ6NjQ1OTQ2ODo5NzA1QTJFOjVFMUM4M0U2IiwidGltZXN0YW1wIjoxNTc4OTI3MDg5LCJob3N0IjoiZ2l0aHViLmNvbSJ9">
+      <meta name="js-proxy-site-detection-payload" content="NGJhNTQ1NTE3YWRmZmIwY2E5NWU4NjlhZGNmYjdhODA5ZTQ5YTcwYTU3YTI0MTEwZjQyYTdiMDQzOGFjMmU5Nnx7InJlbW90ZV9hZGRyZXNzIjoiMTk1LjI1Ljg2LjE2MSIsInJlcXVlc3RfaWQiOiJERDlBOjM0MEE4OjY2RDZDMjU6OUE4Q0E2OTo1RTFDODQ5MiIsInRpbWVzdGFtcCI6MTU3ODkyNzI1NCwiaG9zdCI6ImdpdGh1Yi5jb20ifQ==">
 
     <meta name="enabled-features" content="MARKETPLACE_FEATURED_BLOG_POSTS,MARKETPLACE_INVOICED_BILLING,MARKETPLACE_SOCIAL_PROOF_CUSTOMERS,MARKETPLACE_TRENDING_SOCIAL_PROOF,MARKETPLACE_RECOMMENDATIONS,MARKETPLACE_PENDING_INSTALLATIONS,NOTIFY_ON_BLOCK,RELATED_ISSUES,GHE_CLOUD_TRIAL">
 
@@ -160,7 +160,7 @@
           aria-autocomplete="list"
           aria-controls="jump-to-results"
           aria-label="Search or jump to…"
-          data-jump-to-suggestions-path="/_graphql/GetSuggestedNavigationDestinations#csrf-token=+mhx6lKCoF3cDNzW/n745uRR/yrrQdZgbI5yAuaoxbzxFMszYgCrih+GzyEr3IIFEpKhY8L2Me/gn1sB+nvmSA=="
+          data-jump-to-suggestions-path="/_graphql/GetSuggestedNavigationDestinations#csrf-token=lr2KofOcphyYWDndIK3fxTUq2Kt4eCDcbE7/ewhTlw6dwTB4wx6ty1vSKir1D6Umw+mG4lHPx1PgX9Z4FIC0+g=="
           spellcheck="false"
           autocomplete="off"
           >
@@ -313,7 +313,7 @@
       <img class="avatar" height="20" width="20" alt="@iskydive" src="https://avatars1.githubusercontent.com/u/19528426?s=60&amp;v=4" />
       iskydive
 </a>
-    <!-- '"` --><!-- </textarea></xmp> --></option></form><form action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="ESl9hkfuAxrfU4/SbFYVpMnVwr6hS9nQ8wXuf3k+0EV41EamXqi3hWJTchzwPGok+IVrx9zvYCoclD9Auggnzw==" />
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="syp9E/qH/Tp5mlGG63th4w429AT31qDvb1U68r0HgIfa10Yz48FJpcSarEh3ER5jP2ZdfYpyGRWAxOvNfjF3DQ==" />
       <button type="submit" class="Header-link mr-0 mr-lg-3 py-2 py-lg-0 border-top border-lg-top-0 border-white-fade-15 d-lg-none btn-link d-block width-full text-left" data-ga-click="Header, sign out, icon:logout" style="padding-left: 2px;">
         <svg class="octicon octicon-sign-out v-align-middle" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9V7H8V5h4V3l4 3-4 3zm-2 3H6V3L2 1h8v3h1V1c0-.55-.45-1-1-1H1C.45 0 0 .45 0 1v11.38c0 .39.22.73.55.91L6 16.01V13h4c.55 0 1-.45 1-1V8h-1v4z"/></svg>
         Sign out
@@ -402,7 +402,7 @@
   " data-team-hovercards-enabled>
   <details class="js-user-status-details details-reset details-overlay details-overlay-dark">
     <summary class="btn-link btn-block link-gray no-underline js-toggle-user-status-edit toggle-user-status-edit "
-      role="menuitem" data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.click&quot;,&quot;payload&quot;:{&quot;profile_user_id&quot;:19528426,&quot;target&quot;:&quot;EDIT_USER_STATUS&quot;,&quot;user_id&quot;:19528426,&quot;client_id&quot;:&quot;1077788766.1576233054&quot;,&quot;originating_request_id&quot;:&quot;DD89:39DD:6459468:9705A2E:5E1C83E6&quot;,&quot;originating_url&quot;:&quot;https://github.com/iskydive/VROptionProject/blob/master/Assets/Swift/Scenes/SwiftShopLayout.unity&quot;,&quot;referrer&quot;:&quot;https://github.com/iskydive/VROptionProject/tree/master/Assets/Swift/Scenes&quot;}}" data-hydro-click-hmac="82f0f2ded9c7c9e65df83f8cd66b8496ecf7f69b3801b35482dd0a46b8d6dba5">
+      role="menuitem" data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.click&quot;,&quot;payload&quot;:{&quot;profile_user_id&quot;:19528426,&quot;target&quot;:&quot;EDIT_USER_STATUS&quot;,&quot;user_id&quot;:19528426,&quot;client_id&quot;:&quot;1077788766.1576233054&quot;,&quot;originating_request_id&quot;:&quot;DD9A:340A8:66D6C25:9A8CA69:5E1C8492&quot;,&quot;originating_url&quot;:&quot;https://github.com/iskydive/VROptionProject/blob/master/Assets/Swift/Scenes/SwiftShopLayout.unity&quot;,&quot;referrer&quot;:&quot;https://github.com/iskydive/VROptionProject/tree/master/Assets/Swift/Scenes&quot;}}" data-hydro-click-hmac="7fbb48999caab19a151c69644b2c8788f90c8e80a759677210547f4c0288290a">
       <div class="d-flex">
         <div class="f6 lh-condensed user-status-header
           d-inline-block v-align-middle
@@ -429,7 +429,7 @@
       </div>
     </summary>
     <details-dialog class="details-dialog rounded-1 anim-fade-in fast Box Box--overlay" role="dialog" tabindex="-1">
-      <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="position-relative flex-auto js-user-status-form" action="/users/status?compact=1&amp;link_mentions=0&amp;truncate=1" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="_method" value="put" /><input type="hidden" name="authenticity_token" value="Vkn6X7yieQ8QDvX8cmBrcjDBNCly0ATg1b9o6Fl687HaB/kZpqsHMF77KRYtuM4V+cZTpnRhUTtZo7Cgb3M8jw==" />
+      <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="position-relative flex-auto js-user-status-form" action="/users/status?compact=1&amp;link_mentions=0&amp;truncate=1" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="_method" value="put" /><input type="hidden" name="authenticity_token" value="CwHs4wwKJKNYRqDzOYZ6cCuMaHFaVaUNnPSxAPHWatOHT++lFgNanBazfBlmXt8X4osP/lzk8NYQ6GlIx9+l7Q==" />
         <div class="Box-header bg-gray border-bottom p-3">
           <button class="Box-btn-octicon js-toggle-user-status-edit btn-octicon float-right" type="reset" aria-label="Close dialog" data-close-dialog>
             <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
@@ -549,17 +549,17 @@
       </li>
       <li class="dropdown-divider" role="none"></li>
         <li>
-          <button type="button" class="btn-link dropdown-item ws-normal js-user-status-expire-button" title="in 30 minutes" value="2020-01-13T16:21:29+01:00">
+          <button type="button" class="btn-link dropdown-item ws-normal js-user-status-expire-button" title="in 30 minutes" value="2020-01-13T16:24:14+01:00">
             in 30 minutes
           </button>
         </li>
         <li>
-          <button type="button" class="btn-link dropdown-item ws-normal js-user-status-expire-button" title="in 1 hour" value="2020-01-13T16:51:29+01:00">
+          <button type="button" class="btn-link dropdown-item ws-normal js-user-status-expire-button" title="in 1 hour" value="2020-01-13T16:54:14+01:00">
             in 1 hour
           </button>
         </li>
         <li>
-          <button type="button" class="btn-link dropdown-item ws-normal js-user-status-expire-button" title="in 4 hours" value="2020-01-13T19:51:29+01:00">
+          <button type="button" class="btn-link dropdown-item ws-normal js-user-status-expire-button" title="in 4 hours" value="2020-01-13T19:54:14+01:00">
             in 4 hours
           </button>
         </li>
@@ -617,10 +617,10 @@
     class="dropdown-item btn-link"
     role="menuitem"
     data-feature-preview-trigger-url="/users/iskydive/feature_previews"
-    data-feature-preview-close-details="{&quot;event_type&quot;:&quot;feature_preview.clicks.close_modal&quot;,&quot;payload&quot;:{&quot;client_id&quot;:&quot;1077788766.1576233054&quot;,&quot;originating_request_id&quot;:&quot;DD89:39DD:6459468:9705A2E:5E1C83E6&quot;,&quot;originating_url&quot;:&quot;https://github.com/iskydive/VROptionProject/blob/master/Assets/Swift/Scenes/SwiftShopLayout.unity&quot;,&quot;referrer&quot;:&quot;https://github.com/iskydive/VROptionProject/tree/master/Assets/Swift/Scenes&quot;,&quot;user_id&quot;:19528426}}"
-    data-feature-preview-close-hmac="4f7204ec47f1d11eca908ce484caca89d3800906b020e953bd42e3f490ea3753"
-    data-hydro-click="{&quot;event_type&quot;:&quot;feature_preview.clicks.open_modal&quot;,&quot;payload&quot;:{&quot;link_location&quot;:&quot;user_dropdown&quot;,&quot;client_id&quot;:&quot;1077788766.1576233054&quot;,&quot;originating_request_id&quot;:&quot;DD89:39DD:6459468:9705A2E:5E1C83E6&quot;,&quot;originating_url&quot;:&quot;https://github.com/iskydive/VROptionProject/blob/master/Assets/Swift/Scenes/SwiftShopLayout.unity&quot;,&quot;referrer&quot;:&quot;https://github.com/iskydive/VROptionProject/tree/master/Assets/Swift/Scenes&quot;,&quot;user_id&quot;:19528426}}"
-    data-hydro-click-hmac="e0088aa801922681a19fd3955cf130e72db909aab3cea9f24a2b00bf47c48966"
+    data-feature-preview-close-details="{&quot;event_type&quot;:&quot;feature_preview.clicks.close_modal&quot;,&quot;payload&quot;:{&quot;client_id&quot;:&quot;1077788766.1576233054&quot;,&quot;originating_request_id&quot;:&quot;DD9A:340A8:66D6C25:9A8CA69:5E1C8492&quot;,&quot;originating_url&quot;:&quot;https://github.com/iskydive/VROptionProject/blob/master/Assets/Swift/Scenes/SwiftShopLayout.unity&quot;,&quot;referrer&quot;:&quot;https://github.com/iskydive/VROptionProject/tree/master/Assets/Swift/Scenes&quot;,&quot;user_id&quot;:19528426}}"
+    data-feature-preview-close-hmac="3d1e61f6d11e60fcd5b777973fbc54742229eba7a8a86c056e5a20dddaf75cd1"
+    data-hydro-click="{&quot;event_type&quot;:&quot;feature_preview.clicks.open_modal&quot;,&quot;payload&quot;:{&quot;link_location&quot;:&quot;user_dropdown&quot;,&quot;client_id&quot;:&quot;1077788766.1576233054&quot;,&quot;originating_request_id&quot;:&quot;DD9A:340A8:66D6C25:9A8CA69:5E1C8492&quot;,&quot;originating_url&quot;:&quot;https://github.com/iskydive/VROptionProject/blob/master/Assets/Swift/Scenes/SwiftShopLayout.unity&quot;,&quot;referrer&quot;:&quot;https://github.com/iskydive/VROptionProject/tree/master/Assets/Swift/Scenes&quot;,&quot;user_id&quot;:19528426}}"
+    data-hydro-click-hmac="cdf40ddef372b276c374927d5ac8e1aba50fe2bcf3e0e2bce3e1799830403a04"
   >
     Feature preview
   </button>
@@ -629,14 +629,14 @@
 
     <a role="menuitem" class="dropdown-item" href="https://help.github.com" data-ga-click="Header, go to help, text:help">Help</a>
     <a role="menuitem" class="dropdown-item" href="/settings/profile" data-ga-click="Header, go to settings, icon:settings">Settings</a>
-    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="logout-form" action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="eT+gfohKLp1V0gUaK/L+pXRsHADSHb8NN8juZra5+JcQwptekQyaAujS+NS3mIElRTy1ea+5BvfYWT9ZdY8PHQ==" />
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="logout-form" action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="TutoBOOLd/ogFPNX48tBHkWRJI+4aKCQU9++f0EbgAwnFlMk+s3DZZ0UDpl/oT6edMGN9sXMGWq8Tm9Agi13hg==" />
       
       <button type="submit" class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout" role="menuitem">
         Sign out
       </button>
-      <input type="text" name="required_field_6132" hidden="hidden" class="form-control" />
-<input type="hidden" name="timestamp" value="1578927089776" class="form-control" />
-<input type="hidden" name="timestamp_secret" value="2192ca46e63c65acf700de43e9386d637857e5ab15912d339bdb3493d791afcb" class="form-control" />
+      <input type="text" name="required_field_2cdf" hidden="hidden" class="form-control" />
+<input type="hidden" name="timestamp" value="1578927254322" class="form-control" />
+<input type="hidden" name="timestamp_secret" value="e08a3f56ab4f21c3ff63212aee3b4738b02dcd4cfc0c55b5a0ecce3b48269f87" class="form-control" />
 
 </form>  </details-menu>
 </details>
@@ -702,10 +702,10 @@
 
   <li>
     
-    <!-- '"` --><!-- </textarea></xmp> --></option></form><form data-remote="true" class="clearfix js-social-form js-social-container" action="/notifications/subscribe" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="sssKmwNgZH2G0QgeNuFqZvvpDXkJsfVhfrh+VFEqDbonFhlB03U8XGgzwwthQp6hVdNEMGl2UceRxwP4/pXOug==" />      <input type="hidden" name="repository_id" value="233050553">
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form data-remote="true" class="clearfix js-social-form js-social-container" action="/notifications/subscribe" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="3qah9btPfkuu/uOfXtNw3A9PpmGq7PGM+mAi1D/v4RJLe7Iva1omakAcKIoJcIQboXXvKMorVSoVH194kFAiEg==" />      <input type="hidden" name="repository_id" value="233050553">
 
       <details class="details-reset details-overlay select-menu float-left">
-        <summary class="select-menu-button float-left btn btn-sm btn-with-count" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;WATCH_BUTTON&quot;,&quot;repository_id&quot;:233050553,&quot;client_id&quot;:&quot;1077788766.1576233054&quot;,&quot;originating_request_id&quot;:&quot;DD89:39DD:6459468:9705A2E:5E1C83E6&quot;,&quot;originating_url&quot;:&quot;https://github.com/iskydive/VROptionProject/blob/master/Assets/Swift/Scenes/SwiftShopLayout.unity&quot;,&quot;referrer&quot;:&quot;https://github.com/iskydive/VROptionProject/tree/master/Assets/Swift/Scenes&quot;,&quot;user_id&quot;:19528426}}" data-hydro-click-hmac="2496167712bf7acc946b5f0f32146426d78fd3595a2359ad6e6f0d747a38077d" data-ga-click="Repository, click Watch settings, action:blob#show">          <span data-menu-button>
+        <summary class="select-menu-button float-left btn btn-sm btn-with-count" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;WATCH_BUTTON&quot;,&quot;repository_id&quot;:233050553,&quot;client_id&quot;:&quot;1077788766.1576233054&quot;,&quot;originating_request_id&quot;:&quot;DD9A:340A8:66D6C25:9A8CA69:5E1C8492&quot;,&quot;originating_url&quot;:&quot;https://github.com/iskydive/VROptionProject/blob/master/Assets/Swift/Scenes/SwiftShopLayout.unity&quot;,&quot;referrer&quot;:&quot;https://github.com/iskydive/VROptionProject/tree/master/Assets/Swift/Scenes&quot;,&quot;user_id&quot;:19528426}}" data-hydro-click-hmac="b943d009d3e7f7ab542fba90d994b0a8b5e4c2cef384232130480e8f1534b6d4" data-ga-click="Repository, click Watch settings, action:blob#show">          <span data-menu-button>
               <svg class="octicon octicon-eye v-align-text-bottom" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"/></svg>
               Unwatch
           </span>
@@ -776,9 +776,9 @@
 
   <li>
       <div class="js-toggler-container js-social-container starring-container ">
-    <form class="starred js-social-form" action="/iskydive/VROptionProject/unstar" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="HLMZG6ZTZGMxZSgnJc2LaPIH37w43tcr9de9yGTNu72TW/Qu1jcHMYG0JlXI0WqDdvDbQlVhfe6xa0pLiXQMhg==" />
+    <form class="starred js-social-form" action="/iskydive/VROptionProject/unstar" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="iERSEd9+YYLcllss9AfpVml9XqyN17WMuaEwAHfvZKgHrL8krxoC0GxHVV4ZGwi97YpaUuBoH0n9HceDmlbTkw==" />
       <input type="hidden" name="context" value="repository"></input>
-      <button type="submit" class="btn btn-sm btn-with-count js-toggler-target" aria-label="Unstar this repository" title="Unstar iskydive/VROptionProject" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;UNSTAR_BUTTON&quot;,&quot;repository_id&quot;:233050553,&quot;client_id&quot;:&quot;1077788766.1576233054&quot;,&quot;originating_request_id&quot;:&quot;DD89:39DD:6459468:9705A2E:5E1C83E6&quot;,&quot;originating_url&quot;:&quot;https://github.com/iskydive/VROptionProject/blob/master/Assets/Swift/Scenes/SwiftShopLayout.unity&quot;,&quot;referrer&quot;:&quot;https://github.com/iskydive/VROptionProject/tree/master/Assets/Swift/Scenes&quot;,&quot;user_id&quot;:19528426}}" data-hydro-click-hmac="6413f5a0e1eac3f0414a5de0bf66a801e6301b1f19fdf1fe25c9fd3495e20bcb" data-ga-click="Repository, click unstar button, action:blob#show; text:Unstar">        <svg aria-label="star" height="16" class="octicon octicon-star v-align-text-bottom" viewBox="0 0 14 16" version="1.1" width="14" role="img"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"/></svg>
+      <button type="submit" class="btn btn-sm btn-with-count js-toggler-target" aria-label="Unstar this repository" title="Unstar iskydive/VROptionProject" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;UNSTAR_BUTTON&quot;,&quot;repository_id&quot;:233050553,&quot;client_id&quot;:&quot;1077788766.1576233054&quot;,&quot;originating_request_id&quot;:&quot;DD9A:340A8:66D6C25:9A8CA69:5E1C8492&quot;,&quot;originating_url&quot;:&quot;https://github.com/iskydive/VROptionProject/blob/master/Assets/Swift/Scenes/SwiftShopLayout.unity&quot;,&quot;referrer&quot;:&quot;https://github.com/iskydive/VROptionProject/tree/master/Assets/Swift/Scenes&quot;,&quot;user_id&quot;:19528426}}" data-hydro-click-hmac="20f7e481655cf17ec053b1fd72be3aa218f75f79bb9c893edc2926cbc81527ae" data-ga-click="Repository, click unstar button, action:blob#show; text:Unstar">        <svg aria-label="star" height="16" class="octicon octicon-star v-align-text-bottom" viewBox="0 0 14 16" version="1.1" width="14" role="img"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"/></svg>
 
         Unstar
 </button>        <a class="social-count js-social-count" href="/iskydive/VROptionProject/stargazers"
@@ -786,9 +786,9 @@
            0
         </a>
 </form>
-    <form class="unstarred js-social-form" action="/iskydive/VROptionProject/star" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="EnumNu5nLKUee5Xi/1DHLLdWe3Dq/Vyk3mh6rZYnCyj9r6lgHr4NuyoHsaJYfCKDhAEePGlCPxHoPgoQ1nGbqQ==" />
+    <form class="unstarred js-social-form" action="/iskydive/VROptionProject/star" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="UyUwI+edtFzWBXSkDEnA4RuwkJ3JrYIPJGRqA+OTSXW88T91F0SVQuJ5UOSrZSVOKOf10UoS4boSMhq+o8XZ9A==" />
       <input type="hidden" name="context" value="repository"></input>
-      <button type="submit" class="btn btn-sm btn-with-count js-toggler-target" aria-label="Unstar this repository" title="Star iskydive/VROptionProject" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;STAR_BUTTON&quot;,&quot;repository_id&quot;:233050553,&quot;client_id&quot;:&quot;1077788766.1576233054&quot;,&quot;originating_request_id&quot;:&quot;DD89:39DD:6459468:9705A2E:5E1C83E6&quot;,&quot;originating_url&quot;:&quot;https://github.com/iskydive/VROptionProject/blob/master/Assets/Swift/Scenes/SwiftShopLayout.unity&quot;,&quot;referrer&quot;:&quot;https://github.com/iskydive/VROptionProject/tree/master/Assets/Swift/Scenes&quot;,&quot;user_id&quot;:19528426}}" data-hydro-click-hmac="18816f72ed9d2cba1c9aa24087d32a97353127b710933c655ba27f7dcf987be0" data-ga-click="Repository, click star button, action:blob#show; text:Star">        <svg aria-label="star" height="16" class="octicon octicon-star v-align-text-bottom" viewBox="0 0 14 16" version="1.1" width="14" role="img"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"/></svg>
+      <button type="submit" class="btn btn-sm btn-with-count js-toggler-target" aria-label="Unstar this repository" title="Star iskydive/VROptionProject" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;STAR_BUTTON&quot;,&quot;repository_id&quot;:233050553,&quot;client_id&quot;:&quot;1077788766.1576233054&quot;,&quot;originating_request_id&quot;:&quot;DD9A:340A8:66D6C25:9A8CA69:5E1C8492&quot;,&quot;originating_url&quot;:&quot;https://github.com/iskydive/VROptionProject/blob/master/Assets/Swift/Scenes/SwiftShopLayout.unity&quot;,&quot;referrer&quot;:&quot;https://github.com/iskydive/VROptionProject/tree/master/Assets/Swift/Scenes&quot;,&quot;user_id&quot;:19528426}}" data-hydro-click-hmac="05dce30bc545c38d4c475b94aaaff7724c61529c542f5437933dd805b88f45c2" data-ga-click="Repository, click star button, action:blob#show; text:Star">        <svg aria-label="star" height="16" class="octicon octicon-star v-align-text-bottom" viewBox="0 0 14 16" version="1.1" width="14" role="img"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"/></svg>
 
         Star
 </button>        <a class="social-count js-social-count" href="/iskydive/VROptionProject/stargazers"
@@ -1033,7 +1033,7 @@
                 <svg class="octicon octicon-device-desktop" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M15 2H1c-.55 0-1 .45-1 1v9c0 .55.45 1 1 1h5.34c-.25.61-.86 1.39-2.34 2h8c-1.48-.61-2.09-1.39-2.34-2H15c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm0 9H1V3h14v8z"/></svg>
             </a>
 
-          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form" action="/iskydive/VROptionProject/delete/master/Assets/Swift/Scenes/SwiftShopLayout.unity" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="za4X18i0Q+nCWTsrDVrA1Zm37Lvf3PXvRJQd1T39OY6ORL/SaMF9NqvOoAq2Ok8AgEHC1a04jH7qj9yQluXkSg==" />
+          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form" action="/iskydive/VROptionProject/delete/master/Assets/Swift/Scenes/SwiftShopLayout.unity" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="F5p6fL03awlhAmIRbjWPNwJ8j7MTQYB2M7MbseMI7+lUcNJ5HUJV1giV+TDVVQDiG4qh3WGl+eedqNr0SBAyLQ==" />
             <button class="btn-octicon btn-octicon-danger tooltipped tooltipped-nw" type="submit"
               aria-label="Delete this file" data-disable-with>
               <svg class="octicon octicon-trashcan" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 2H9c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1H2c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1v9c0 .55.45 1 1 1h7c.55 0 1-.45 1-1V5c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm-1 12H3V5h1v8h1V5h1v8h1V5h1v8h1V5h1v9zm1-10H2V3h9v1z"/></svg>
