@@ -14,9 +14,9 @@ P1 complète + FP2-5
 # Fonctionnalités priorité 1 : 
 
 - FP1-1: Collaboratif. (Thomas & Mehdi)
-- FP1-2: Téléportation en HTC. (Thomas & Mehdi)
-- FP1-3: Attraper et déplacer chaque machine en HTC. (Thomas & Mehdi)
-- FP1-4 :Déplacement avatar TP (Third Person) ✅
+- FP1-2: Téléportation en HTC. (Thomas & Mehdi) ✅
+- FP1-3: Attraper et déplacer chaque machine en HTC. (Thomas & Mehdi) ✅
+- FP1-4 : Déplacement avatar TP (Third Person) ✅
 - FP1-5: sauvegarder la configuration de l’usine dans un fichier JSON (Victor)
 - FP1-6: Voir l’état de l’usine en réalité augmentée en chargeant le fichier JSON. (Victor)
 
@@ -31,8 +31,8 @@ P1 complète + FP2-5
 
 # Fonctionnalités priorité 3 : 
 
-- FP3-1: Top view HTC + déplacement Top View HTC (Thomas & Mehdi)
-- FP3-2: Top view avatar TP + Move from top view avatar TP (Thomas & Mehdi)
+- FP3-1: Top view HTC + déplacement Top View HTC (Thomas & Mehdi) ✅
+- FP3-2: Top view avatar TP + Move from top view avatar TP (Thomas & Mehdi) ✅
 - FP3-3: Prendre des screenshots en HTC (Victor)
 - FP3-4: Radar des positions de UserOther (en HTC) (On fera surement pas)
 - FP3-5: charger l’image de la configuration souhaitée (en HTC) (Après le Menu)
