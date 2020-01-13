@@ -5,7 +5,8 @@ using Valve.VR;
 public class RightControllerManager : MonoBehaviourPunCallbacks
 {
     private GameObject grabbedObject;
-
+    public GameObject VRCamera;
+    public GameObject CameraRig;
     private bool isControllerInside = false;
     private GameObject controller;
 
@@ -14,6 +15,8 @@ public class RightControllerManager : MonoBehaviourPunCallbacks
 
     public delegate void OnGrabReleased(GameObject controller);
     public static event OnGrabReleased onGrabReleased;
+
+    private bool isOnTopView = false;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +41,25 @@ public class RightControllerManager : MonoBehaviourPunCallbacks
         if (SteamVR_Actions._default.GrabPinch.GetStateUp(SteamVR_Input_Sources.RightHand) && grabbedObject)
         {
             UngrabSelectedObject(controller);
+        }
+
+        if (SteamVR_Actions._default.TopView.GetStateUp(SteamVR_Input_Sources.RightHand))
+        {
+            if (isOnTopView)
+            {
+                Vector3 currentPosition = VRCamera.transform.position;
+                currentPosition.y = 0f;
+                VRCamera.transform.position = currentPosition;
+                CameraRig.transform.position = currentPosition;
+            }
+            else
+            {
+                Vector3 currentPosition = VRCamera.transform.position;
+                currentPosition.y = GameObject.Find("TopView").gameObject.transform.position.y;
+                VRCamera.transform.position = currentPosition;
+                CameraRig.transform.position = currentPosition;
+            }
+            isOnTopView = !isOnTopView;
         }
     }
 
