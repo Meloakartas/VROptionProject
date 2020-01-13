@@ -5,9 +5,14 @@ using Valve.VR;
 public class RightControllerManager : MonoBehaviourPunCallbacks
 {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     private GameObject grabbedObject;
 
     private bool isControllerInside = false;
+=======
+    public GameObject VRCamera;
+    public GameObject CameraRig;
+>>>>>>> Stashed changes
 =======
     public GameObject VRCamera;
     public GameObject CameraRig;
@@ -37,6 +42,7 @@ public class RightControllerManager : MonoBehaviourPunCallbacks
         if (!gameObject.transform.parent.GetComponent<PhotonView>().IsMine) return;
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         if (SteamVR_Actions._default.GrabPinch.GetStateDown(SteamVR_Input_Sources.RightHand) && grabbedObject)
         {
             GrabSelectedObject(controller);
@@ -45,6 +51,8 @@ public class RightControllerManager : MonoBehaviourPunCallbacks
         {
             UngrabSelectedObject(controller);
 =======
+=======
+>>>>>>> Stashed changes
         if (SteamVR_Actions._default.TopView.GetStateUp(SteamVR_Input_Sources.RightHand))
         {
             if (isOnTopView)
@@ -62,6 +70,9 @@ public class RightControllerManager : MonoBehaviourPunCallbacks
                 CameraRig.transform.position = currentPosition;
             }
             isOnTopView = !isOnTopView;
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
         }
     }
