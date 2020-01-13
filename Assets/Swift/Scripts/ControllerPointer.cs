@@ -89,8 +89,8 @@ public class ControllerPointer : MonoBehaviour
 
     public void UpdateColor(Color color)
     {
-        pointer.GetComponent<MeshRenderer>().material.SetColor("_Color", color);
-        cursor.GetComponent<MeshRenderer>().material.SetColor("_Color", color);
+        pointer?.GetComponent<MeshRenderer>().material.SetColor("_Color", color);
+        cursor?.GetComponent<MeshRenderer>().material.SetColor("_Color", color);
     }
 
     public void ActivatePointer()
