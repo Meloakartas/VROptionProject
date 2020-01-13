@@ -83,6 +83,7 @@ using UnityEngine;
             }
             else
             {
+                Debug.Log("Received pos");
                 if (this.SynchronizePosition)
                 {
                     for (int i = 0; i < SynchronizedChildTransform.Count; i++)
