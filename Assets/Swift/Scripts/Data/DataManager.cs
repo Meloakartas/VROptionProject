@@ -30,16 +30,16 @@ public class DataManager : MonoBehaviour
         room.MachineList = machineList;
 
         string json = JsonUtility.ToJson(room);
-        string fileName = formatFilenameWithDate();
-        string filepath = Path.Combine(Application.streamingAssetsPath, fileName);
+        string filename = formatFilenameWithDate();
+        string filepath = Path.Combine(Application.streamingAssetsPath, filename);
         Debug.Log("FilePath: " + filepath);
         File.WriteAllText(filepath, json);
     }
 
-    public void Load(string name)
+    public void Load(string filename)
     {
         Debug.Log("Loading setup: " + name + "...");
-        string filepath = Path.Combine(Application.streamingAssetsPath, name);
+        string filepath = Path.Combine(Application.streamingAssetsPath, filename);
 
         if(File.Exists(filepath))
         {
