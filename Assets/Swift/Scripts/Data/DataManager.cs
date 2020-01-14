@@ -2,32 +2,44 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using System.Globalization;
+using System;
 
 public class DataManager : MonoBehaviour
 {
-    public void save()
+    void Awake()
+    {
+        // test purpose
+        //Save();
+    }
+
+    public void Save()
     {
         Debug.Log("Saving room...");
         Room room = new Room();
         List<Machine> machineList = new List<Machine>();
-        for(GameObject mach in GameObject.FindGameObjectsWithTag("Grabbable"))
+        int i = 0;
+        foreach(GameObject mach in GameObject.FindGameObjectsWithTag("Grabbable"))
         {
             Machine machine = new Machine();
             machine.Name = mach.name;
-            Machine.Position = mach.transform.position;
-            Machine.Rotation = mach.transform.rotation;
+            machine.Position = mach.transform.position;
+            machine.Rotation = mach.transform.rotation;
             machineList.Add(machine);
         }
+        room.MachineList = machineList;
+
         string json = JsonUtility.ToJson(room);
-        DateTime date = new DateTime.Now;
-        string fileName = date.Year + " " + date.Month + " " + date.Day + " - " + date.Hour + " " + date.Minute + " " + date.Second + ".json";
-        File.WriteAllText(@fileName, json);
+        string fileName = formatFilenameWithDate();
+        string filepath = Path.Combine(Application.streamingAssetsPath, fileName);
+        Debug.Log("FilePath: " + filepath);
+        File.WriteAllText(filepath, json);
     }
 
-    public void load(string name)
+    public void Load(string name)
     {
         Debug.Log("Loading setup: " + name + "...");
-        string filepath = Path.Combine(Application.streamingAssetsPath, name + ".json");
+        string filepath = Path.Combine(Application.streamingAssetsPath, name);
 
         if(File.Exists(filepath))
         {
@@ -41,5 +53,16 @@ public class DataManager : MonoBehaviour
                 mach.transform.rotation = machine.Rotation;
             }
         }
+    }
+
+    private string formatFilenameWithDate()
+    {
+        DateTime date = DateTime.Now;
+        return date.Year + " " 
+        + date.Month + " " 
+        + date.Day + " - " 
+        + date.Hour + " " 
+        + date.Minute + " " 
+        + date.Second + ".json";
     }
 }
