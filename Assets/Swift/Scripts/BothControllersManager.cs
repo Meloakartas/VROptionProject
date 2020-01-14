@@ -36,7 +36,10 @@ public class BothControllersManager : MonoBehaviour
         fx.breakForce = 20000;
         fx.breakTorque = 20000;
         fx.connectedBody = grabbedObject.GetComponent<Rigidbody>();
-        grabbedObject.GetComponentInParent<BoxCollider>().enabled = false;
+        foreach(var collider in grabbedObject.GetComponentsInParent<BoxCollider>())
+        {
+            collider.enabled = false;
+        }
     }
 
     void UngrabSelectedObject(GameObject controller)
@@ -49,8 +52,12 @@ public class BothControllersManager : MonoBehaviour
             fx.connectedBody.GetComponent<Rigidbody>().angularVelocity = controller.GetComponent<SteamVR_Behaviour_Pose>().GetAngularVelocity() * 2;
             fx.connectedBody = null;
             Destroy(controller.GetComponent<FixedJoint>());
-        }            
-        grabbedObject.GetComponentInParent<BoxCollider>().enabled = true;
+        }
+        //grabbedObject.GetComponentInParent<BoxCollider>().enabled = true;
+        foreach (var collider in grabbedObject.GetComponentsInParent<BoxCollider>())
+        {
+            collider.enabled = true;
+        }
     }
 
     void OnTriggerEnter(Collider other)
