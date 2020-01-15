@@ -1069,6 +1069,8 @@ GameObject:
   - component: {fileID: 54797738578527410}
   - component: {fileID: 1937290179}
   - component: {fileID: 1937290180}
+  - component: {fileID: 7331296820459898869}
+  - component: {fileID: 9090865975489552433}
   m_Layer: 0
   m_Name: F1
   m_TagString: Grabbable
@@ -1157,12 +1159,46 @@ MonoBehaviour:
   Group: 0
   prefixField: -1
   Synchronization: 3
-  OwnershipTransfer: 0
+  OwnershipTransfer: 1
   ObservedComponents:
   - {fileID: 1937290179}
+  - {fileID: 7331296820459898869}
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &7331296820459898869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1296522355409322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizeVelocity: 1
+  m_SynchronizeAngularVelocity: 1
+  m_TeleportEnabled: 1
+  m_TeleportIfDistanceGreaterThan: 3
+--- !u!114 &9090865975489552433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1296522355409322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da0d9417249ee79438403900215726f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FreeBorder: {fileID: 1366210974828336}
+  isElectrifiedMaterial: {fileID: 2100000, guid: 104c4f4c1231ca848a3990a7da730ec3,
+    type: 2}
+  isNotElectrifiedMaterial: {fileID: 2100000, guid: 142dd82da36bdce47a167b47044379df,
+    type: 2}
 --- !u!1 &1297688225373106
 GameObject:
   m_ObjectHideFlags: 0
@@ -3484,6 +3520,7 @@ GameObject:
   - component: {fileID: 64352708212802370}
   - component: {fileID: 23501397820138926}
   - component: {fileID: 65217431776275294}
+  - component: {fileID: 4726744942596879505}
   m_Layer: 8
   m_Name: MachineArea
   m_TagString: AllowTeleportation
@@ -3574,10 +3611,22 @@ BoxCollider:
   m_GameObject: {fileID: 1937203293450766}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.99999994, y: 1.0000001, z: 6.123235e-17}
   m_Center: {x: 0, y: 0, z: 0.000000031664968}
+--- !u!114 &4726744942596879505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1937203293450766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f289355c7c1253e4e86c2fe23c18a304, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1944003700334982
 GameObject:
   m_ObjectHideFlags: 0

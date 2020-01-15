@@ -36,5 +36,6 @@ MonoBehaviour:
   - RespawnSpaceship
   - ActivateDeactivateFire
   - ThrowBall
+  - ChangeBordersColor
   DisableAutoOpenWizard: 1
   ShowSettings: 1
