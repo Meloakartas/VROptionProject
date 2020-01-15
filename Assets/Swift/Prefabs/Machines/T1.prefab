@@ -2079,6 +2079,7 @@ GameObject:
   - component: {fileID: 33643737697043442}
   - component: {fileID: 23810225682280176}
   - component: {fileID: 65974151392948994}
+  - component: {fileID: 1777041822}
   m_Layer: 8
   m_Name: MachineArea
   m_TagString: AllowTeleportation
@@ -2159,6 +2160,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.0000002, z: 6.123235e-17}
   m_Center: {x: 0, y: 0, z: 0.000000017695129}
+--- !u!114 &1777041822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550197007866580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f289355c7c1253e4e86c2fe23c18a304, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1561478599909980
 GameObject:
   m_ObjectHideFlags: 0
@@ -3157,6 +3170,8 @@ GameObject:
   - component: {fileID: 54647460249324702}
   - component: {fileID: 7920780045764451541}
   - component: {fileID: 5633607721842671572}
+  - component: {fileID: 1777041821}
+  - component: {fileID: 5336797940175058626}
   m_Layer: 0
   m_Name: T1
   m_TagString: Grabbable
@@ -3233,6 +3248,7 @@ MonoBehaviour:
   OwnershipTransfer: 0
   ObservedComponents:
   - {fileID: 5633607721842671572}
+  - {fileID: 1777041821}
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -3251,6 +3267,39 @@ MonoBehaviour:
   m_SynchronizePosition: 1
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
+--- !u!114 &1777041821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1691634680994484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizeVelocity: 1
+  m_SynchronizeAngularVelocity: 1
+  m_TeleportEnabled: 1
+  m_TeleportIfDistanceGreaterThan: 3
+--- !u!114 &5336797940175058626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1691634680994484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da0d9417249ee79438403900215726f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FreeBorder: {fileID: 1889338519057066}
+  isElectrifiedMaterial: {fileID: 2100000, guid: 104c4f4c1231ca848a3990a7da730ec3,
+    type: 2}
+  isNotElectrifiedMaterial: {fileID: 2100000, guid: 142dd82da36bdce47a167b47044379df,
+    type: 2}
 --- !u!1 &1708052934600624
 GameObject:
   m_ObjectHideFlags: 0

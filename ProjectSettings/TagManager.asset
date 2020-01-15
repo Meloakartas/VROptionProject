@@ -18,6 +18,7 @@ TagManager:
   - Operator
   - AllowTeleportation
   - Machine
+  - ElectricCable
   layers:
   - Default
   - TransparentFX

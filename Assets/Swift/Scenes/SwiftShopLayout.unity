@@ -445,6 +445,7 @@ GameObject:
   - component: {fileID: 96955762}
   - component: {fileID: 96955764}
   - component: {fileID: 96955763}
+  - component: {fileID: 96955765}
   m_Layer: 0
   m_Name: TestCube
   m_TagString: Grabbable
@@ -519,8 +520,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 96955757}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -46.2977, y: 5.09, z: 16.24}
-  m_LocalScale: {x: 1, y: 10, z: 1}
+  m_LocalPosition: {x: -46.2977, y: 0.698, z: 16.24}
+  m_LocalScale: {x: 1, y: 1.22, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -572,12 +573,29 @@ MonoBehaviour:
   Group: 0
   prefixField: -1
   Synchronization: 1
-  OwnershipTransfer: 0
+  OwnershipTransfer: 1
   ObservedComponents:
   - {fileID: 96955763}
+  - {fileID: 96955765}
   viewIdField: 1
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &96955765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96955757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizeVelocity: 1
+  m_SynchronizeAngularVelocity: 1
+  m_TeleportEnabled: 1
+  m_TeleportIfDistanceGreaterThan: 3
 --- !u!1 &99027437
 GameObject:
   m_ObjectHideFlags: 0
@@ -4483,10 +4501,9 @@ GameObject:
   - component: {fileID: 566092281}
   - component: {fileID: 566092279}
   - component: {fileID: 566092283}
-  - component: {fileID: 566092280}
   m_Layer: 0
   m_Name: FloorCable4
-  m_TagString: Untagged
+  m_TagString: ElectricCable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4529,19 +4546,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &566092280
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 566092278}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d7c452088f611445ade47d5111c6c1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Energy: electricity
 --- !u!33 &566092281
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -7216,27 +7220,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5eb49be853b6cc4ebd8a591cc40dbbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target:
-  - {fileID: 273051973}
-  - {fileID: 1264681991}
-  - {fileID: 1974994353}
-  - {fileID: 1087290707}
-  - {fileID: 1956515564}
-  - {fileID: 1475447041}
-  - {fileID: 276266685}
-  - {fileID: 634874420}
-  - {fileID: 1329761685}
-  - {fileID: 1990968004}
-  - {fileID: 1556135303}
-  - {fileID: 1512483485}
-  - {fileID: 2098764036}
-  - {fileID: 1567548921}
-  - {fileID: 755334323}
-  - {fileID: 754023690}
-  movementSpeed: 5
-  rotationSpeed: 10
-  current: 0
-  check: 0
 --- !u!65 &952812342
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8722,10 +8705,9 @@ GameObject:
   - component: {fileID: 1117706122}
   - component: {fileID: 1117706120}
   - component: {fileID: 1117706124}
-  - component: {fileID: 1117706121}
   m_Layer: 0
   m_Name: FloorCable1
-  m_TagString: Untagged
+  m_TagString: ElectricCable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8768,19 +8750,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &1117706121
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1117706119}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d7c452088f611445ade47d5111c6c1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Energy: electricity
 --- !u!33 &1117706122
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -11525,27 +11494,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5eb49be853b6cc4ebd8a591cc40dbbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target:
-  - {fileID: 1956515564}
-  - {fileID: 1475447041}
-  - {fileID: 276266685}
-  - {fileID: 634874420}
-  - {fileID: 1329761685}
-  - {fileID: 1990968004}
-  - {fileID: 1556135303}
-  - {fileID: 1512483485}
-  - {fileID: 2098764036}
-  - {fileID: 1567548921}
-  - {fileID: 755334323}
-  - {fileID: 754023690}
-  - {fileID: 273051973}
-  - {fileID: 1264681991}
-  - {fileID: 1974994353}
-  - {fileID: 1087290707}
-  movementSpeed: 5
-  rotationSpeed: 10
-  current: 0
-  check: 0
 --- !u!54 &1509968813
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12859,10 +12807,9 @@ GameObject:
   - component: {fileID: 1750781961}
   - component: {fileID: 1750781959}
   - component: {fileID: 1750781963}
-  - component: {fileID: 1750781960}
   m_Layer: 0
   m_Name: FloorCable2
-  m_TagString: Untagged
+  m_TagString: ElectricCable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12905,19 +12852,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &1750781960
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1750781958}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d7c452088f611445ade47d5111c6c1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Energy: electricity
 --- !u!33 &1750781961
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -13664,10 +13598,9 @@ GameObject:
   - component: {fileID: 1837548507}
   - component: {fileID: 1837548505}
   - component: {fileID: 1837548509}
-  - component: {fileID: 1837548506}
   m_Layer: 0
   m_Name: FloorCable3
-  m_TagString: Untagged
+  m_TagString: ElectricCable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13710,19 +13643,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &1837548506
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1837548504}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d7c452088f611445ade47d5111c6c1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Energy: electricity
 --- !u!33 &1837548507
 MeshFilter:
   m_ObjectHideFlags: 0

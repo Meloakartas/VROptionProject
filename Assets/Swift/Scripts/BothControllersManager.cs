@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Photon.Pun;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR;
@@ -19,6 +20,8 @@ public class BothControllersManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!gameObject.transform.parent.GetComponent<PhotonView>().IsMine) return;
+
         if (SteamVR_Actions._default.GrabPinch.GetStateDown(inputSource) && grabbedObject)
         {
             GrabSelectedObject(controller);
@@ -31,6 +34,7 @@ public class BothControllersManager : MonoBehaviour
 
     void GrabSelectedObject(GameObject controller)
     {
+        grabbedObject.GetComponent<PhotonView>().TransferOwnership(PhotonNetwork.LocalPlayer);
         Debug.Log("Grabbing object : " + grabbedObject.name + " with controller : " + controller.name);
         FixedJoint fx = controller.AddComponent<FixedJoint>();
         fx.breakForce = 20000;
