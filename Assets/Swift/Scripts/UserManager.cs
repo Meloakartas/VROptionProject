@@ -19,6 +19,8 @@ public class UserManager : MonoBehaviourPunCallbacks
     /// </summary>
     GameObject goFreeLookCameraRig = null;
 
+    private bool isOnTopView = false;
+
     void Awake()
     {
         if (photonView.IsMine)
@@ -31,6 +33,23 @@ public class UserManager : MonoBehaviourPunCallbacks
     private void Update()
     {
         if (!photonView.IsMine) return;
+
+        if(Input.GetButtonDown("TopView"))
+        {
+            if(isOnTopView)
+            {
+                Vector3 currentPosition = UserMeInstance.transform.position;
+                currentPosition.y = 1f;
+                UserMeInstance.gameObject.transform.SetPositionAndRotation(currentPosition, UserMeInstance.transform.rotation);
+            }
+            else
+            {
+                Vector3 currentPosition = UserMeInstance.transform.position;
+                currentPosition.y = GameObject.Find("TopView").gameObject.transform.position.y + 1f;
+                UserMeInstance.gameObject.transform.SetPositionAndRotation(currentPosition, UserMeInstance.transform.rotation);
+            }
+            isOnTopView = !isOnTopView;
+        }
     }
 
     // Start is called before the first frame update
