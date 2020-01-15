@@ -7,7 +7,7 @@ public class LeftControllerManager : MonoBehaviourPunCallbacks
     public GameObject VRCamera;
     public GameObject CameraRig;
     private GameObject controller;
-    private GameObject grabbedObject;
+    
 
     public delegate void OnGrabPressed(GameObject controller);
     public static event OnGrabPressed onGrabPressed;
@@ -40,15 +40,6 @@ public class LeftControllerManager : MonoBehaviourPunCallbacks
         {
             TeleportReleased();
         }
-
-        if (SteamVR_Actions._default.GrabPinch.GetStateDown(SteamVR_Input_Sources.LeftHand) && grabbedObject)
-        {
-            GrabSelectedObject(controller);
-        }
-        if (SteamVR_Actions._default.GrabPinch.GetStateUp(SteamVR_Input_Sources.LeftHand) && grabbedObject)
-        {
-            UngrabSelectedObject(controller);
-        }
     }
 
     public void TeleportPressed()
@@ -76,46 +67,6 @@ public class LeftControllerManager : MonoBehaviourPunCallbacks
         {
             controller.GetComponent<ControllerPointer>().DesactivatePointer();
             Destroy(controller.GetComponent<ControllerPointer>());
-        }
-    }
-
-    void GrabSelectedObject(GameObject controller)
-    {
-        Debug.Log("Grabbing object with controller : " + controller.name);
-        FixedJoint fx = controller.AddComponent<FixedJoint>();
-        fx.breakForce = 20000;
-        fx.breakTorque = 20000;
-        fx.connectedBody = grabbedObject.GetComponent<Rigidbody>();
-    }
-
-    void UngrabSelectedObject(GameObject controller)
-    {
-        Debug.Log("Ungrabbing object with controller : " + controller.name);
-        FixedJoint fx = controller.GetComponent<FixedJoint>();
-        if (fx)
-        {
-            fx.connectedBody.GetComponent<Rigidbody>().velocity = controller.GetComponent<SteamVR_Behaviour_Pose>().GetVelocity() * 2;
-            fx.connectedBody.GetComponent<Rigidbody>().angularVelocity = controller.GetComponent<SteamVR_Behaviour_Pose>().GetAngularVelocity() * 2;
-            fx.connectedBody = null;
-            Destroy(controller.GetComponent<FixedJoint>());
-        }
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Grabbable")
-        {
-            Debug.Log("Triggered a grabbable object : " + controller.name);
-            grabbedObject = other.gameObject;
-        }
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        if (other.tag == "Grabbable")
-        {
-            Debug.Log("Exited a grabbable object : " + controller.name);
-            grabbedObject = null;
         }
     }
 }
