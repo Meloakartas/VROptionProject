@@ -4,14 +4,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR;
 
-public class BothControllersManager : MonoBehaviour
+public class GrabTool : MonoBehaviour
 {
     private GameObject grabbedObject;
     private SteamVR_Input_Sources inputSource;
     private GameObject controller;
 
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
         controller = this.gameObject;
         inputSource = controller.GetComponent<SteamVR_Behaviour_Pose>().inputSource;

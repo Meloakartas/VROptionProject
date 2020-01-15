@@ -2,7 +2,7 @@
 using UnityEngine;
 using Valve.VR;
 
-public class RightControllerManager : MonoBehaviourPunCallbacks
+public class TopviewTool : MonoBehaviour
 { 
     private GameObject grabbedObject;
 

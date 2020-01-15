@@ -4,7 +4,7 @@ using UnityEngine;
 using System.Globalization;
 using System;
 
-public class ScreenshotManager : MonoBehaviour
+public class SnapTool : MonoBehaviour
 {
     void Update()
     {

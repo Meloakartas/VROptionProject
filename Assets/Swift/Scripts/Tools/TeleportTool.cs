@@ -2,7 +2,7 @@
 using UnityEngine;
 using Valve.VR;
 
-public class LeftControllerManager : MonoBehaviourPunCallbacks
+public class TeleportTool : MonoBehaviour
 {
     public GameObject VRCamera;
     public GameObject CameraRig;
@@ -18,7 +18,6 @@ public class LeftControllerManager : MonoBehaviourPunCallbacks
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     private void Awake()
