@@ -2,13 +2,13 @@
   "source": "Unity",
   "applications": [
     {
-      "app_key": "application.generated.unity.twinitworkshoplayout.exe",
+      "app_key": "application.generated.unity.swift.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "C:\\Users\\Administrateur\\Documents\\GitHub\\VROptionProject\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "action_manifest_path": "C:\\Projet unity\\VROptionProject\\Assets\\StreamingAssets\\SteamVR\\actions.json",
       "strings": {
         "en_us": {
-          "name": "TwinIt - Workshop Layout [Testing]"
+          "name": "Swift [Testing]"
         }
       }
     }

@@ -10,10 +10,10 @@ public class TopviewTool : MonoBehaviour
 
     private bool isControllerInside = false;
 
-    public GameObject VRCamera;
-    public GameObject CameraRig;
+    private GameObject VRCamera;
+    private GameObject CameraRig;
 
-    private GameObject controller;
+    private SteamVR_Input_Sources inputSource;
 
     public delegate void OnGrabPressed(GameObject controller);
     public static event OnGrabPressed onGrabPressed;
@@ -24,20 +24,16 @@ public class TopviewTool : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        inputSource = gameObject.GetComponent<SteamVR_Behaviour_Pose>().inputSource;
+        CameraRig = gameObject.transform.parent.gameObject;
+        VRCamera = CameraRig.transform.Find("Camera").gameObject;
     }
-
-    private void Awake()
-    {
-        controller = this.gameObject;
-    }
-
     // Update is called once per frame
     void Update()
     {
         if (!gameObject.transform.parent.GetComponent<PhotonView>().IsMine) return;
 
-        if (SteamVR_Actions._default.TopView.GetStateUp(SteamVR_Input_Sources.RightHand))
+        if (SteamVR_Actions._default.GrabPinch.GetStateDown(inputSource))
         {
             if (isOnTopView)
             {

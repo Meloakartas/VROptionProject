@@ -6,4 +6,5 @@ using UnityEngine;
 public class Room
 {
     public List<Machine> MachineList;
+    public string ImagePath;
 }

@@ -92,14 +92,10 @@ public class VR_CameraRigMultiuser : MonoBehaviourPunCallbacks
             // ONLY for player OTHER
 
             // Create the model of the LEFT Hand for the UserOther, use a SteamVR model  Assets/SteamVR/Models/vr_glove_left_model_slim.fbx
-            var modelLeft = Instantiate(UserOtherLeftHandModel);
-            // Put it as a child of the SteamVRLeft Game Object
-            modelLeft.transform.parent = SteamVRLeft.transform;
+            var modelLeft = Instantiate(UserOtherLeftHandModel, SteamVRLeft.transform);
 
             // Create the model of the RIGHT Hand for the UserOther Assets/SteamVR/Models/vr_glove_right_model_slim.fbx
-            var modelRight = Instantiate(UserOtherRightHandModel);
-            // Put it as a child of the SteamVRRight Game Object
-            modelRight.transform.parent = SteamVRRight.transform;
+            var modelRight = Instantiate(UserOtherRightHandModel, SteamVRRight.transform);
         }
     }
 

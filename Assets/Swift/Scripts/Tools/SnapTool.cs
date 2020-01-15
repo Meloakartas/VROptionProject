@@ -3,20 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Globalization;
 using System;
+using Valve.VR;
 
 public class SnapTool : MonoBehaviour
 {
+
+    private SteamVR_Input_Sources inputSource;
+    void Start()
+    {
+        inputSource = gameObject.GetComponent<SteamVR_Behaviour_Pose>().inputSource;
+    }
+
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (SteamVR_Actions._default.GrabPinch.GetStateDown(inputSource))
         {
             Debug.Log("Starting screenshot...");
             captureScreenshot();
         }
-        
     }
 
-    public void captureScreenshot()
+    public string captureScreenshot()
     {
         DateTime date = DateTime.Now;
         string filename = "Screen-" + date.Year + "-" + date.Month + "-" + date.Day + " " + date.Hour + "-" + date.Minute + "-" + date.Second + ".png";
@@ -30,5 +37,6 @@ public class SnapTool : MonoBehaviour
 
         byte[] imageBytes = screenImage.EncodeToPNG();
         System.IO.File.WriteAllBytes(path, imageBytes);
+        return path;
     }
 }

@@ -8,15 +8,19 @@ using System;
 public class DataManager : MonoBehaviour
 {
     private readonly string _SUBPATH = "/Swift/StreamingAssets/SavedLayout/";
+    //private ScreenshotManager screenshotManager;
 
     void Awake()
     {
         //test purpose
-        Save();
+        //Save();
+        Load("test");
     }
 
     public void Save()
     {
+        Debug.Log("Taking screenshot...");
+        string imagePath = "";//screenshotManager.captureScreenshot();
         Debug.Log("Saving room...");
         Room room = new Room();
         List<Machine> machineList = new List<Machine>();
@@ -30,17 +34,19 @@ public class DataManager : MonoBehaviour
             machineList.Add(machine);
         }
         room.MachineList = machineList;
+        room.ImagePath = imagePath;
 
         string json = JsonUtility.ToJson(room);
         string filename = formatFilenameWithDate();
         string filepath = Application.dataPath + _SUBPATH + filename;
-        Debug.Log("FilePath: " + filepath);
         File.WriteAllText(filepath, json);
+        Debug.Log("Room saved. Path: " + filepath);
     }
 
     public void Load(string filename)
     {
-        Debug.Log("Loading setup: " + name + "...");
+        //filename = "Swift-2020-1-15 11-28-22.json";
+        Debug.Log("Loading setup: " + filename + "...");
         string filepath = Application.dataPath + _SUBPATH + filename;
 
         if(File.Exists(filepath))
