@@ -55,12 +55,11 @@ using System.Collections;
         /// Sets the name of the player, and save it in the PlayerPrefs for future sessions.
         /// </summary>
         /// <param name="value">The name of the Player</param>
-        public void SaveValueToPlayerPref(string value)
+        public void SaveValueToPlayerPref()
         {
             if (string.IsNullOrWhiteSpace(PlayerPrefKey)) return;
-            PlayerPrefs.SetString(PlayerPrefKey, value);
+            PlayerPrefs.SetString(PlayerPrefKey, this.gameObject.GetComponentInChildren<InputField>().text);
         }
-
 
         #endregion
     }
