@@ -7,10 +7,12 @@ using System;
 
 public class DataManager : MonoBehaviour
 {
+    private readonly string _SUBPATH = "/Swift/StreamingAssets/SavedLayout/";
+
     void Awake()
     {
-        // test purpose
-        //Save();
+        //test purpose
+        Save();
     }
 
     public void Save()
@@ -31,7 +33,7 @@ public class DataManager : MonoBehaviour
 
         string json = JsonUtility.ToJson(room);
         string filename = formatFilenameWithDate();
-        string filepath = Path.Combine(Application.streamingAssetsPath, filename);
+        string filepath = Application.dataPath + _SUBPATH + filename;
         Debug.Log("FilePath: " + filepath);
         File.WriteAllText(filepath, json);
     }
@@ -39,7 +41,7 @@ public class DataManager : MonoBehaviour
     public void Load(string filename)
     {
         Debug.Log("Loading setup: " + name + "...");
-        string filepath = Path.Combine(Application.streamingAssetsPath, filename);
+        string filepath = Application.dataPath + _SUBPATH + filename;
 
         if(File.Exists(filepath))
         {
@@ -58,11 +60,12 @@ public class DataManager : MonoBehaviour
     private string formatFilenameWithDate()
     {
         DateTime date = DateTime.Now;
-        return date.Year + " " 
-        + date.Month + " " 
-        + date.Day + " - " 
-        + date.Hour + " " 
-        + date.Minute + " " 
+        return "Swift-"
+        + date.Year + "-" 
+        + date.Month + "-" 
+        + date.Day + " " 
+        + date.Hour + "-" 
+        + date.Minute + "-" 
         + date.Second + ".json";
     }
 }

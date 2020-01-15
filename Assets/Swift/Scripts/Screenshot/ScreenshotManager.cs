@@ -19,19 +19,16 @@ public class ScreenshotManager : MonoBehaviour
     public void captureScreenshot()
     {
         DateTime date = DateTime.Now;
-        string filename =  date.Year + "-" + date.Month + "-" + date.Day + " " + date.Hour + "-" + date.Minute + "-" + date.Second;
-        string path = Application.streamingAssetsPath + "/Screenshots/"
-                + filename + ".png";
+        string filename = "Screen-" + date.Year + "-" + date.Month + "-" + date.Day + " " + date.Hour + "-" + date.Minute + "-" + date.Second + ".png";
+        string path = Application.dataPath + "/Swift/StreamingAssets/Screenshots/" + filename;
         Debug.Log("Screenshot path: " + path);
 
         Texture2D screenImage = new Texture2D(Screen.width, Screen.height);
-        //Get Image from screen
+
         screenImage.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0);
         screenImage.Apply();
-        //Convert to png
-        byte[] imageBytes = screenImage.EncodeToPNG();
 
-        //Save image to file
+        byte[] imageBytes = screenImage.EncodeToPNG();
         System.IO.File.WriteAllBytes(path, imageBytes);
     }
 }
