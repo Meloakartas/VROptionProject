@@ -26,7 +26,7 @@ using System.Collections;
 
 
         /// <summary>
-        /// MonoBehaviour method called on GameObject by Unity during initialization phase.
+        /// MonoBehaviour method called on GameObject by Unity during initialization pha
         /// </summary>
         void Start()
         {
