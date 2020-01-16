@@ -1,8 +1,10 @@
 ﻿using Photon.Pun;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityStandardAssets.Cameras;
 using UnityStandardAssets.Characters.ThirdPerson;
+using Valve.Newtonsoft.Json;
 
 public class UserManager : MonoBehaviourPunCallbacks
 {
