@@ -4,27 +4,38 @@ using UnityEngine;
 using System.IO;
 using System.Globalization;
 using System;
+using Valve.VR;
 
 public class DataManager : MonoBehaviour
 {
     private readonly string _SUBPATH = "/Swift/StreamingAssets/SavedLayout/";
-    //private ScreenshotManager screenshotManager;
+    private SnapTool snapTool;
+    private SteamVR_Input_Sources inputSource;
 
-    void Awake()
+    void Start()
     {
-        //test purpose
-        //Save();
-        Load("test");
+        inputSource = gameObject.GetComponent<SteamVR_Behaviour_Pose>().inputSource;
+    }
+    void Update()
+    {
+        if (SteamVR_Actions._default.GrabPinch.GetStateDown(inputSource) && gameObject.GetComponent<ToolManager>().CurrentTool == "SaveConfig")
+        {
+        }
+        else if (SteamVR_Actions._default.GrabPinch.GetStateDown(inputSource) && gameObject.GetComponent<ToolManager>().CurrentTool == "LoadConfig")
+        {
+        }
     }
 
     public void Save()
     {
-        Debug.Log("Taking screenshot...");
-        string imagePath = "";//screenshotManager.captureScreenshot();
-        Debug.Log("Saving room...");
+        StartCoroutine(snapTool.captureScreenshot());
+        string imagePath = snapTool.path;
+        
+        Debug.Log(imagePath);
+
         Room room = new Room();
         List<Machine> machineList = new List<Machine>();
-        int i = 0;
+
         foreach(GameObject mach in GameObject.FindGameObjectsWithTag("Grabbable"))
         {
             Machine machine = new Machine();
@@ -40,13 +51,12 @@ public class DataManager : MonoBehaviour
         string filename = formatFilenameWithDate();
         string filepath = Application.dataPath + _SUBPATH + filename;
         File.WriteAllText(filepath, json);
+
         Debug.Log("Room saved. Path: " + filepath);
     }
 
     public void Load(string filename)
     {
-        //filename = "Swift-2020-1-15 11-28-22.json";
-        Debug.Log("Loading setup: " + filename + "...");
         string filepath = Application.dataPath + _SUBPATH + filename;
 
         if(File.Exists(filepath))

@@ -8,6 +8,8 @@ using Valve.VR;
 public class SnapTool : MonoBehaviour
 {
 
+    private IEnumerator coroutine;
+    public string path;
     private SteamVR_Input_Sources inputSource;
     void Start()
     {
@@ -18,17 +20,18 @@ public class SnapTool : MonoBehaviour
     {
         if (SteamVR_Actions._default.GrabPinch.GetStateDown(inputSource))
         {
-            Debug.Log("Starting screenshot...");
-            captureScreenshot();
+            coroutine = captureScreenshot();
+            StartCoroutine(coroutine);
         }
     }
 
-    public string captureScreenshot()
+    public IEnumerator captureScreenshot()
     {
+        yield return new WaitForEndOfFrame();
+
         DateTime date = DateTime.Now;
         string filename = "Screen-" + date.Year + "-" + date.Month + "-" + date.Day + " " + date.Hour + "-" + date.Minute + "-" + date.Second + ".png";
-        string path = Application.dataPath + "/Swift/StreamingAssets/Screenshots/" + filename;
-        Debug.Log("Screenshot path: " + path);
+        path = Application.dataPath + "/Swift/StreamingAssets/Screenshots/" + filename;
 
         Texture2D screenImage = new Texture2D(Screen.width, Screen.height);
 
@@ -37,6 +40,5 @@ public class SnapTool : MonoBehaviour
 
         byte[] imageBytes = screenImage.EncodeToPNG();
         System.IO.File.WriteAllBytes(path, imageBytes);
-        return path;
     }
 }
