@@ -6,23 +6,64 @@ using System.Globalization;
 using System;
 using Valve.VR;
 
-public class DataManager : MonoBehaviour
+public class ConfigTool : MonoBehaviour
 {
     private readonly string _SUBPATH = "/Swift/StreamingAssets/SavedLayout/";
     private SnapTool snapTool;
     private SteamVR_Input_Sources inputSource;
+    public string LoadConfig;
+    private GameObject configMenu;
+    private GameObject cameraUser;
 
     void Start()
     {
+        cameraUser = gameObject.transform.parent.transform.Find("Camera").gameObject;
         inputSource = gameObject.GetComponent<SteamVR_Behaviour_Pose>().inputSource;
+        configMenu = GameObject.Find("ConfigMenu");
     }
     void Update()
     {
         if (SteamVR_Actions._default.GrabPinch.GetStateDown(inputSource) && gameObject.GetComponent<ToolManager>().CurrentTool == "SaveConfig")
         {
+            Save();
         }
         else if (SteamVR_Actions._default.GrabPinch.GetStateDown(inputSource) && gameObject.GetComponent<ToolManager>().CurrentTool == "LoadConfig")
         {
+            if (LoadConfig != "")
+                Load(LoadConfig);
+            else
+            {
+                ShowConfigMenu();
+            }
+        }
+    }
+
+    private void ShowConfigMenu()
+    {
+        Vector3 playerPos = cameraUser.transform.position;
+        Vector3 playerDirection = cameraUser.transform.forward;
+        Quaternion playerRotation = cameraUser.transform.rotation;
+        float spawnDistance = 0.6f;
+        Vector3 spawnPos = playerPos + playerDirection * spawnDistance;
+        configMenu.transform.position = spawnPos;
+        configMenu.transform.LookAt(2 * configMenu.transform.position - cameraUser.transform.position);
+
+        configMenu.SetActive(!configMenu.activeSelf);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.name.Contains("Config"))
+        {
+            LoadConfig = other.GetComponentInChildren<UnityEngine.UI.Text>().text + ".json"; //Config's name
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.name.Contains("Config"))
+        {
+            LoadConfig = "";
         }
     }
 

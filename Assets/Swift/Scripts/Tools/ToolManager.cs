@@ -8,14 +8,12 @@ public class ToolManager : MonoBehaviour
     public string CurrentTool;
     public GameObject Menu;
 
-    private bool isMenuActive;
     private GameObject cameraUser;
 
     // Start is called before the first frame update
     void Start()
     {
         cameraUser = gameObject.transform.parent.transform.Find("Camera").gameObject;
-        isMenuActive = false;
     }
 
     // Update is called once per frame
@@ -30,8 +28,7 @@ public class ToolManager : MonoBehaviour
 
             Vector3 spawnPos = playerPos + playerDirection * spawnDistance;
 
-            Menu.SetActive(!isMenuActive);
-            isMenuActive = !isMenuActive;
+            Menu.SetActive(!Menu.activeSelf);
 
             Menu.transform.position = spawnPos;
             Menu.transform.LookAt(2 * Menu.transform.position - cameraUser.transform.position);

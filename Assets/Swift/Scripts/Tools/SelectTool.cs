@@ -7,6 +7,7 @@ public class SelectTool : MonoBehaviour
 {    
     private string currentTool;
     private Material newMat;
+    private bool isMenuActive;
 
     void Start()
     {
@@ -60,12 +61,12 @@ public class SelectTool : MonoBehaviour
                     newMat = Resources.Load("Materials/Tools/SnapHand", typeof(Material)) as Material;
                     break;
                 case "SaveConfig":
-                    other.gameObject.AddComponent<GrabTool>();
+                    other.gameObject.AddComponent<ConfigTool>();
                     other.gameObject.GetComponent<ToolManager>().CurrentTool = "SaveConfig";
                     newMat = Resources.Load("Materials/Tools/SaveHand", typeof(Material)) as Material;
                     break;
                 case "LoadConfig":
-                    other.gameObject.AddComponent<GrabTool>();
+                    other.gameObject.AddComponent<ConfigTool>();
                     other.gameObject.GetComponent<ToolManager>().CurrentTool = "LoadConfig";
                     newMat = Resources.Load("Materials/Tools/LoadHand", typeof(Material)) as Material;
                     break;
