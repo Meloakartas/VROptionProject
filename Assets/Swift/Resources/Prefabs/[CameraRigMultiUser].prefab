@@ -112,6 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentTool: Grab
   Menu: {fileID: 2836689785998660448}
+  Trackpad: {fileID: 0}
 --- !u!114 &5413246480027404316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -556,6 +557,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentTool: Grab
   Menu: {fileID: 2836689785998660448}
+  Trackpad: {fileID: 0}
 --- !u!114 &4617566105493700114
 MonoBehaviour:
   m_ObjectHideFlags: 0

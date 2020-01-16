@@ -48,31 +48,30 @@ public class SelectTool : MonoBehaviour
                 case "Grab":
                     other.gameObject.AddComponent<GrabTool>();
                     other.gameObject.GetComponent<ToolManager>().CurrentTool = "Grab";
-                    newMat = Resources.Load("GrabHand", typeof(Material)) as Material;
+                    newMat = Resources.Load("Materials/Tools/GrabHand", typeof(Material)) as Material;
                     break;
                 case "TopView":
                     other.gameObject.AddComponent<TopviewTool>();
                     other.gameObject.GetComponent<ToolManager>().CurrentTool = "TopView";
-                    newMat = Resources.Load("TopViewHand", typeof(Material)) as Material;
+                    newMat = Resources.Load("Materials/Tools/TopViewHand", typeof(Material)) as Material;
                     break;
                 case "Snap":
                     other.gameObject.AddComponent<SnapTool>();
                     other.gameObject.GetComponent<ToolManager>().CurrentTool = "Snap";
-                    newMat = Resources.Load("SnapHand", typeof(Material)) as Material;
+                    newMat = Resources.Load("Materials/Tools/SnapHand", typeof(Material)) as Material;
                     break;
                 case "SaveConfig":
                     other.gameObject.AddComponent<GrabTool>();
                     other.gameObject.GetComponent<ToolManager>().CurrentTool = "SaveConfig";
-                    newMat = Resources.Load("SaveHand", typeof(Material)) as Material;
+                    newMat = Resources.Load("Materials/Tools/SaveHand", typeof(Material)) as Material;
                     break;
                 case "LoadConfig":
                     other.gameObject.AddComponent<GrabTool>();
                     other.gameObject.GetComponent<ToolManager>().CurrentTool = "LoadConfig";
-                    newMat = Resources.Load("LoadHand", typeof(Material)) as Material;
+                    newMat = Resources.Load("Materials/Tools/LoadHand", typeof(Material)) as Material;
                     break;
             }
-
-            other.gameObject.transform.Find("Trackpad").gameObject.GetComponent<Renderer>().material = newMat;
+            other.gameObject.transform.GetChild(0).transform.Find("trackpad").gameObject.GetComponent<Renderer>().material = newMat;
         }
     }
 }
