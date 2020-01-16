@@ -5,7 +5,6 @@ using Valve.VR;
 
 public class SelectTool : MonoBehaviour
 {    
-    private ToolManager toolManager;
     private string currentTool;
     private Material newMat;
 
@@ -71,7 +70,8 @@ public class SelectTool : MonoBehaviour
                     newMat = Resources.Load("Materials/Tools/LoadHand", typeof(Material)) as Material;
                     break;
             }
-            other.gameObject.transform.GetChild(0).transform.Find("trackpad").gameObject.GetComponent<Renderer>().material = newMat;
+            if(other.gameObject.transform.GetChild(0).transform.Find("trackpad") != null)
+                other.gameObject.transform.GetChild(0).transform.Find("trackpad").gameObject.GetComponent<Renderer>().material = newMat;
         }
     }
 }
