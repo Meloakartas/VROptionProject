@@ -4,6 +4,10 @@
    "app_key" : "application.generated.unity.swift.exe",
    "bindings" : {
       "/actions/buggy" : {
+         "chords" : [],
+         "haptics" : [],
+         "poses" : [],
+         "skeleton" : [],
          "sources" : [
             {
                "inputs" : {
@@ -246,29 +250,28 @@
             {
                "inputs" : {
                   "click" : {
-                     "output" : "/actions/default/in/topview"
-                  }
-               },
-               "mode" : "button",
-               "path" : "/user/hand/right/input/application_menu"
-            },
-            {
-               "inputs" : {
-                  "click" : {
-                     "output" : "/actions/default/in/topview"
+                     "output" : "/actions/default/in/menubutton"
                   }
                },
                "mode" : "button",
                "path" : "/user/hand/left/input/application_menu"
             },
             {
-               "inputs" : {},
-               "mode" : "none",
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/default/in/menubutton"
+                  }
+               },
+               "mode" : "button",
                "path" : "/user/hand/right/input/application_menu"
             }
          ]
       },
       "/actions/platformer" : {
+         "chords" : [],
+         "haptics" : [],
+         "poses" : [],
+         "skeleton" : [],
          "sources" : [
             {
                "inputs" : {

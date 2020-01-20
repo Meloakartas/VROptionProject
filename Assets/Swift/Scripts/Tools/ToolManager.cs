@@ -21,7 +21,7 @@ public class ToolManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(SteamVR_Actions._default.TopView.GetStateDown(inputSource))
+        if(SteamVR_Actions._default.MenuButton.GetStateDown(inputSource))
         {
             Vector3 playerPos = cameraUser.transform.position;
             Vector3 playerDirection = cameraUser.transform.forward;
@@ -30,6 +30,7 @@ public class ToolManager : MonoBehaviour
 
             Vector3 spawnPos = playerPos + playerDirection * spawnDistance;
             Menu.SetActive(!Menu.activeSelf);
+            //TODO: Display Cones
 
             Menu.transform.position = spawnPos;
             Menu.transform.LookAt(2 * Menu.transform.position - cameraUser.transform.position);

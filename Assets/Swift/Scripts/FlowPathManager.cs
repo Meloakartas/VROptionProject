@@ -40,13 +40,17 @@ public class FlowPathManager : MonoBehaviour, IPunInstantiateMagicCallback
         flowPointEntry = GameObject.Find("FlowPointEntry");
         flowPointExit = GameObject.Find("FlowPointExit");
 
+        Debug.Log(flowPointEntry.name + " TO " + orderedObjects.First().gameObject.name);
+
         DrawArrowBetweenObjects(flowPointEntry, orderedObjects.First().gameObject.transform.Find("FlowPoints").gameObject.transform.Find("EntryPoint").gameObject);
 
         for(int i = 0; i < orderedObjects.Count - 1; i++)
         {
+            Debug.Log(orderedObjects[i].name + " TO " + orderedObjects[i + 1].name);
             DrawArrowBetweenObjects(orderedObjects[i].transform.Find("FlowPoints").gameObject.transform.Find("ExitPoint").gameObject, orderedObjects[i+1].transform.Find("FlowPoints").gameObject.transform.Find("EntryPoint").gameObject);
         }
 
+        Debug.Log(orderedObjects.Last().gameObject.name + " TO " + flowPointExit.name);
         DrawArrowBetweenObjects(orderedObjects.Last().gameObject.transform.Find("FlowPoints").gameObject.transform.Find("ExitPoint").gameObject, flowPointExit);
     }
 
@@ -73,7 +77,6 @@ public class FlowPathManager : MonoBehaviour, IPunInstantiateMagicCallback
 
     void IPunInstantiateMagicCallback.OnPhotonInstantiate(PhotonMessageInfo info)
     {
-        Debug.Log("JUST GOT INSTANTIATED FLOWPATH");
         object[] data = gameObject.GetComponent<PhotonView>().InstantiationData;
         ColorUtility.TryParseHtmlString(data[1].ToString(), out materialColor);
 
@@ -81,7 +84,12 @@ public class FlowPathManager : MonoBehaviour, IPunInstantiateMagicCallback
         {
             orderedObjects.Add(GameObject.Find(s));
         }
-        Debug.Log("FROM FLOWPATHMANAGER : " + orderedObjects[0].name);
+
+        Debug.Log("ORDERED OBJECTS : " );
+        foreach(var g in orderedObjects)
+        {
+            Debug.Log(g.name + "\n");
+        }
 
         AtInstantiation();
     }

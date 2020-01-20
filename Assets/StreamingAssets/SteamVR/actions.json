@@ -50,7 +50,7 @@
       "type": "boolean"
     },
     {
-      "name": "/actions/default/in/TopView",
+      "name": "/actions/default/in/MenuButton",
       "type": "boolean"
     },
     {

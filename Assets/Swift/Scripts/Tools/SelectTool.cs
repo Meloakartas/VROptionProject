@@ -36,10 +36,13 @@ public class SelectTool : MonoBehaviour
                     Destroy(other.gameObject.GetComponent<SnapTool>());
                     break;
                 case "SaveConfig":
-                    Destroy(other.gameObject.GetComponent<GrabTool>());
+                    Destroy(other.gameObject.GetComponent<ConfigTool>());
                     break;
                 case "LoadConfig":
-                    Destroy(other.gameObject.GetComponent<GrabTool>());
+                    Destroy(other.gameObject.GetComponent<ConfigTool>());
+                    break;
+                case "FlowPath":
+                    Destroy(other.gameObject.GetComponent<FlowPathTool>());
                     break;
             }
 
@@ -69,6 +72,11 @@ public class SelectTool : MonoBehaviour
                     other.gameObject.AddComponent<ConfigTool>();
                     other.gameObject.GetComponent<ToolManager>().CurrentTool = "LoadConfig";
                     newMat = Resources.Load("Materials/Tools/LoadHand", typeof(Material)) as Material;
+                    break;
+                case "FlowPath":
+                    other.gameObject.AddComponent<FlowPathTool>();
+                    other.gameObject.GetComponent<ToolManager>().CurrentTool = "FlowPath";
+                    newMat = Resources.Load("Materials/Tools/FlowPathHand", typeof(Material)) as Material;
                     break;
             }
             if(other.gameObject.transform.GetChild(0).transform.Find("trackpad") != null)
