@@ -43,7 +43,6 @@ public class TeleportTool : MonoBehaviour
 
     public void TeleportPressed()
     {
-        Debug.Log("Teleport pressed");
         if (!controller.GetComponent<ControllerPointer>())
         {
             controller.AddComponent<ControllerPointer>();
@@ -53,7 +52,6 @@ public class TeleportTool : MonoBehaviour
 
     public void TeleportReleased()
     {
-        Debug.Log("Teleport released");
         if (controller.GetComponent<ControllerPointer>().CanTeleport)
         {
             CameraRig.transform.position = controller.GetComponent<ControllerPointer>().TargetPosition;

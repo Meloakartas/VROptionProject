@@ -16,11 +16,11 @@ public class ShowConfigs : MonoBehaviour
         var configFiles = path.GetFiles();
         foreach (FileInfo file in configFiles)
         {
-            if(file.Name.Contains(".json"))
+            if(!file.Name.Contains(".meta"))
             {
                 GameObject newConfig = Instantiate(ConfigPreview, gameObject.transform);
                 newConfig.GetComponentInChildren<UnityEngine.UI.Text>().text = file.Name.Replace(".json","");
-                var imagePath = GetPreviewImage(path + file.Name);
+                var imagePath = "";//GetPreviewImage(path + file.Name);
                 if (imagePath != "")
                 {
                     Texture imagePreview = Resources.Load(imagePath, typeof(Texture)) as Texture;

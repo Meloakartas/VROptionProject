@@ -35,7 +35,6 @@ public class GrabTool : MonoBehaviour
     void GrabSelectedObject(GameObject controller)
     {
         grabbedObject.GetComponent<PhotonView>().TransferOwnership(PhotonNetwork.LocalPlayer);
-        Debug.Log("Grabbing object : " + grabbedObject.name + " with controller : " + controller.name);
         FixedJoint fx = controller.AddComponent<FixedJoint>();
         fx.breakForce = 20000;
         fx.breakTorque = 20000;
@@ -68,7 +67,6 @@ public class GrabTool : MonoBehaviour
     {
         if (other.tag == "Grabbable" && grabbedObject == null)
         {
-            Debug.Log("Triggered a grabbable object : " + controller.name);
             grabbedObject = other.gameObject;
         }
     }
@@ -78,7 +76,6 @@ public class GrabTool : MonoBehaviour
         FixedJoint fx = controller.GetComponent<FixedJoint>();
         if (!fx && other.tag == "Grabbable")
         {
-            Debug.Log("Exited a grabbable object : " + controller.name);
             grabbedObject = null;
         }
     }

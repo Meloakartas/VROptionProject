@@ -7,19 +7,21 @@ public class ToolManager : MonoBehaviour
 {
     public string CurrentTool;
     public GameObject Menu;
+    private SteamVR_Input_Sources inputSource;
 
     private GameObject cameraUser;
 
     // Start is called before the first frame update
     void Start()
     {
+        inputSource = gameObject.GetComponent<SteamVR_Behaviour_Pose>().inputSource;
         cameraUser = gameObject.transform.parent.transform.Find("Camera").gameObject;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(SteamVR_Actions._default.TopView.GetStateUp(SteamVR_Input_Sources.Any))
+        if(SteamVR_Actions._default.TopView.GetStateDown(inputSource))
         {
             Vector3 playerPos = cameraUser.transform.position;
             Vector3 playerDirection = cameraUser.transform.forward;
@@ -27,7 +29,6 @@ public class ToolManager : MonoBehaviour
             float spawnDistance = 0.6f;
 
             Vector3 spawnPos = playerPos + playerDirection * spawnDistance;
-
             Menu.SetActive(!Menu.activeSelf);
 
             Menu.transform.position = spawnPos;

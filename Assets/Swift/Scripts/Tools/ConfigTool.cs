@@ -17,9 +17,11 @@ public class ConfigTool : MonoBehaviour
 
     void Start()
     {
+        snapTool = new SnapTool();
+        LoadConfig = "";
         cameraUser = gameObject.transform.parent.transform.Find("Camera").gameObject;
         inputSource = gameObject.GetComponent<SteamVR_Behaviour_Pose>().inputSource;
-        configMenu = GameObject.Find("ConfigMenu");
+        configMenu = gameObject.transform.parent.transform.Find("ConfigMenu").gameObject;
     }
     void Update()
     {
@@ -53,15 +55,16 @@ public class ConfigTool : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.name.Contains("Config"))
+        if(other.name.Contains("ConfigPreview"))
         {
             LoadConfig = other.GetComponentInChildren<UnityEngine.UI.Text>().text + ".json"; //Config's name
+            print("CURRENT CONFIG : " + LoadConfig);
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.name.Contains("Config"))
+        if (other.name.Contains("ConfigPreview"))
         {
             LoadConfig = "";
         }
