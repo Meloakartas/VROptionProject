@@ -27,7 +27,6 @@ public class UserManager : MonoBehaviourPunCallbacks
     {
         if (photonView.IsMine)
         {
-            Debug.LogFormat("Avatar UserMe created for userId {0}", photonView.ViewID);
             UserMeInstance = gameObject;
         }
     }
@@ -47,7 +46,7 @@ public class UserManager : MonoBehaviourPunCallbacks
             else
             {
                 Vector3 currentPosition = UserMeInstance.transform.position;
-                currentPosition.y = GameObject.Find("TopView").gameObject.transform.position.y + 1f;
+                currentPosition.y = GameObject.Find("TopViewFloor").gameObject.transform.position.y + 1f;
                 UserMeInstance.gameObject.transform.SetPositionAndRotation(currentPosition, UserMeInstance.transform.rotation);
             }
             isOnTopView = !isOnTopView;
@@ -57,7 +56,6 @@ public class UserManager : MonoBehaviourPunCallbacks
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("isLocalPlayer:" + photonView.IsMine);
         updateGoFreeLookCameraRig();
         followLocalPlayer();
         activateLocalPlayer();
@@ -99,7 +97,6 @@ public class UserManager : MonoBehaviourPunCallbacks
                 Transform transformFollow = transform.Find("EthanSkeleton/EthanHips") != null ? transform.Find("EthanSkeleton/EthanHips") : transform;
                 // call the SetTarget on the FreeLookCam attached to the FreeLookCameraRig
                 goFreeLookCameraRig.GetComponent<FreeLookCam>().SetTarget(transformFollow);
-                Debug.Log("ThirdPersonControllerMultiuser follow:" + transformFollow);
 
                 //Lock the cursor at the middle of the screen and make it disappear
 

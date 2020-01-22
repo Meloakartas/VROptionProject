@@ -36,12 +36,12 @@ public class SnapTool : MonoBehaviour
         string filename = "Screen-" + date.Year + "-" + date.Month + "-" + date.Day + " " + date.Hour + "-" + date.Minute + "-" + date.Second + ".png";
         if(isConfigPreview)
         {
-            path = Application.dataPath + "/Swift/StreamingAssets/SavedLayoutScreenshots/" + filename;
+            path = Application.streamingAssetsPath + "/SavedLayoutScreenshots/" + filename;
             //path = Application.dataPath + "/Swift/Resources/SavedLayoutScreenshots/" + filename;
         }
         else
         {
-            path = Application.dataPath + "/Swift/StreamingAssets/Screenshots/" + filename;
+            path = Application.streamingAssetsPath + "/Screenshots/" + filename;
         }
 
         Texture2D screenImage = new Texture2D(Screen.width, Screen.height);

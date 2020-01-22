@@ -40,17 +40,17 @@ public class FlowPathManager : MonoBehaviour, IPunInstantiateMagicCallback
         flowPointEntry = GameObject.Find("FlowPointEntry");
         flowPointExit = GameObject.Find("FlowPointExit");
 
-        Debug.Log(flowPointEntry.name + " TO " + orderedObjects.First().gameObject.name);
+        //Debug.Log(flowPointEntry.name + " TO " + orderedObjects.First().gameObject.name);
 
         DrawArrowBetweenObjects(flowPointEntry, orderedObjects.First().gameObject.transform.Find("FlowPoints").gameObject.transform.Find("EntryPoint").gameObject);
 
         for(int i = 0; i < orderedObjects.Count - 1; i++)
         {
-            Debug.Log(orderedObjects[i].name + " TO " + orderedObjects[i + 1].name);
+            //Debug.Log(orderedObjects[i].name + " TO " + orderedObjects[i + 1].name);
             DrawArrowBetweenObjects(orderedObjects[i].transform.Find("FlowPoints").gameObject.transform.Find("ExitPoint").gameObject, orderedObjects[i+1].transform.Find("FlowPoints").gameObject.transform.Find("EntryPoint").gameObject);
         }
 
-        Debug.Log(orderedObjects.Last().gameObject.name + " TO " + flowPointExit.name);
+        //Debug.Log(orderedObjects.Last().gameObject.name + " TO " + flowPointExit.name);
         DrawArrowBetweenObjects(orderedObjects.Last().gameObject.transform.Find("FlowPoints").gameObject.transform.Find("ExitPoint").gameObject, flowPointExit);
     }
 
@@ -79,7 +79,7 @@ public class FlowPathManager : MonoBehaviour, IPunInstantiateMagicCallback
     {
         object[] data = gameObject.GetComponent<PhotonView>().InstantiationData;
         ColorUtility.TryParseHtmlString(data[1].ToString(), out materialColor);
-        Debug.Log("INSTANTIATING : " + data[2].ToString());
+        //Debug.Log("INSTANTIATING : " + data[2].ToString());
         gameObject.name = data[2].ToString();
 
         string content = gameObject.name; // Array contains the target position and the IDs of the selected units

@@ -22,7 +22,6 @@ public class FlowPathProductManager : MonoBehaviourPunCallbacks, IOnEventCallbac
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log("lol");
         if(flowPathInstance != null)
         {
             gameObject.transform.Find("Distance").gameObject.GetComponent<Text>().text = flowPathInstance.GetComponent<FlowPathManager>().GetTotalDistance().ToString();
@@ -34,7 +33,6 @@ public class FlowPathProductManager : MonoBehaviourPunCallbacks, IOnEventCallbac
         
         if (flowPathInstance != null && GameObject.Find(flowPathInstance.name) != null)
         {
-            Debug.Log("INSTANCE != null & : " + flowPathInstance.name);
             PhotonNetwork.Destroy(flowPathInstance);
 
             flowPathInstance = null;
@@ -48,7 +46,6 @@ public class FlowPathProductManager : MonoBehaviourPunCallbacks, IOnEventCallbac
                 object[] instanceData = new object[3];
 
                 instanceData[0] = JsonConvert.SerializeObject(OrderedMachinesNames);
-                Debug.Log(instanceData[0]);
                 instanceData[1] = string.Format("#{0}", ColorUtility.ToHtmlStringRGBA(color));
                 instanceData[2] = gameObject.name + "Arrows";
                 flowPathInstance = PhotonNetwork.Instantiate("Prefabs/FlowPath", new Vector3(0, 0, 0), Quaternion.identity, 0, instanceData);

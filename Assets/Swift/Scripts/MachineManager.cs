@@ -25,7 +25,6 @@ public class MachineManager : MonoBehaviour
     void ChangeBordersColor(bool mustHighlight, PhotonMessageInfo info)
     {
         Material material = mustHighlight ? isElectrifiedMaterial : isNotElectrifiedMaterial;
-        Debug.Log("Must change borders colors");
 
         foreach (Transform child in FreeBorder.transform)
         {

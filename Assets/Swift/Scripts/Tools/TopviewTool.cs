@@ -13,6 +13,8 @@ public class TopviewTool : MonoBehaviour
     private GameObject VRCamera;
     private GameObject CameraRig;
 
+    private float topviewY;
+
     private SteamVR_Input_Sources inputSource;
 
     public delegate void OnGrabPressed(GameObject controller);
@@ -27,6 +29,7 @@ public class TopviewTool : MonoBehaviour
         inputSource = gameObject.GetComponent<SteamVR_Behaviour_Pose>().inputSource;
         CameraRig = gameObject.transform.parent.gameObject;
         VRCamera = CameraRig.transform.Find("Camera").gameObject;
+        topviewY = GameObject.Find("TopViewFloor").gameObject.transform.position.y;
     }
     // Update is called once per frame
     void Update()
@@ -45,7 +48,7 @@ public class TopviewTool : MonoBehaviour
             else
             {
                 Vector3 currentPosition = VRCamera.transform.position;
-                currentPosition.y = GameObject.Find("TopView").gameObject.transform.position.y;
+                currentPosition.y = topviewY;
                 VRCamera.transform.position = currentPosition;
                 CameraRig.transform.position = currentPosition;
             }

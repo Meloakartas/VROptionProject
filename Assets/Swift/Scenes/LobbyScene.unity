@@ -674,7 +674,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64f1623f5a0bbdd4db612c278bf8423b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxPlayersPerRoom: 2
+  maxPlayersPerRoom: 10
   ipInputField: {fileID: 1599775667}
   portInputField: {fileID: 564504332}
   nickNameInputField: {fileID: 1005787443}

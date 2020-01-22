@@ -25,7 +25,7 @@ public class ShowConfigs : MonoBehaviour
 
     public void UpdateConfigs()
     {
-        var path = new DirectoryInfo(Application.dataPath + _SUBPATH);
+        var path = new DirectoryInfo(Application.streamingAssetsPath + "/SavedLayout/");
         var configFiles = path.GetFiles();
         foreach (Transform child in gameObject.transform)
         {
@@ -37,9 +37,7 @@ public class ShowConfigs : MonoBehaviour
             {
                 GameObject newConfig = Instantiate(ConfigPreview, gameObject.transform);
                 newConfig.GetComponentInChildren<UnityEngine.UI.Text>().text = file.Name.Replace(".json", "");
-                Debug.Log(path + file.Name);
-                var url = Application.dataPath + _IMAGESUBPATH + file.Name.Replace(".json", ".png").Replace("Swift", "Screen");
-                Debug.Log("URL TA RACE : " + url);
+                var url = Application.streamingAssetsPath + "/SavedLayoutScreenshots/" + file.Name.Replace(".json", ".png").Replace("Swift", "Screen");
                 //Application.dataPath + "/Swift/StreamingAssets/SavedLayoutScreenshots/" + file.Name.Replace(".json", ".png");
                 //var fileImage = new DirectoryInfo(Application.dataPath + "/Swift/StreamingAssets/SavedLayoutScreenshots/");
                 byte[] imgData;

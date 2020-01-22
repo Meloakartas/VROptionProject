@@ -23,7 +23,6 @@ public class ElectricityCableBehavior : MonoBehaviour
     {
         if(other.gameObject.tag == "ElectricCable")
         {
-            Debug.Log("ELECTRICITY ENTER GRABB");
             gameObject.GetComponentInParent<PhotonView>().RPC("ChangeBordersColor", RpcTarget.AllViaServer, true);
         }
     }
@@ -32,7 +31,6 @@ public class ElectricityCableBehavior : MonoBehaviour
     {
         if (other.gameObject.tag == "ElectricCable")
         {
-            Debug.Log("ELECTRICITY Exit GRABB");
             gameObject.GetComponentInParent<PhotonView>().RPC("ChangeBordersColor", RpcTarget.AllViaServer, false);
         }
     }

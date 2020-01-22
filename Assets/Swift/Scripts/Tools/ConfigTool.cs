@@ -97,7 +97,7 @@ public class ConfigTool : MonoBehaviour
 
         string json = JsonUtility.ToJson(room);
         string filename = formatFilenameWithDate();
-        string filepath = Application.dataPath + _SUBPATH + filename;
+        string filepath = Application.streamingAssetsPath + "/SavedLayout/" + filename;
         File.WriteAllText(filepath, json);
 
         Debug.Log("Room saved. Path: " + filepath);
@@ -105,7 +105,7 @@ public class ConfigTool : MonoBehaviour
 
     public void Load(string filename)
     {
-        string filepath = Application.dataPath + _SUBPATH + filename;
+        string filepath = Application.streamingAssetsPath + "/SavedLayout/" + filename;
 
         if(File.Exists(filepath))
         {

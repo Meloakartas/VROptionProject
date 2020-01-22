@@ -47,7 +47,7 @@ public class GrabTool : MonoBehaviour
 
     void UngrabSelectedObject(GameObject controller)
     {
-        Debug.Log("Ungrabbing object : " + grabbedObject.name + " with controller: " + controller.name);
+        //Debug.Log("Ungrabbing object : " + grabbedObject.name + " with controller: " + controller.name);
         FixedJoint fx = controller.GetComponent<FixedJoint>();
         if (fx)
         {

@@ -32,7 +32,6 @@ public class VR_CameraRigMultiuser : MonoBehaviourPunCallbacks
     {
         if (photonView.IsMine)
         {
-            //Debug.LogFormat("Avatar UserMe created for userId {0}", photonView.ViewID);
             UserMeInstance = gameObject;
         }
     }
