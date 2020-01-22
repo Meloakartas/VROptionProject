@@ -1,4 +1,5 @@
 ﻿using Photon.Pun;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,8 @@ public class ToolManager : MonoBehaviour
     public string CurrentTool;
     public GameObject Menu;
     private SteamVR_Input_Sources inputSource;
+    public GameObject[] ToolPicker;
+    private Material newMat;
 
     private GameObject cameraUser;
 
@@ -17,6 +20,7 @@ public class ToolManager : MonoBehaviour
     {
         inputSource = gameObject.GetComponent<SteamVR_Behaviour_Pose>().inputSource;
         cameraUser = gameObject.transform.parent.transform.Find("Camera").gameObject;
+        AddDefaultTool();
     }
 
     // Update is called once per frame
@@ -33,10 +37,24 @@ public class ToolManager : MonoBehaviour
 
             Vector3 spawnPos = playerPos + playerDirection * spawnDistance;
             Menu.SetActive(!Menu.activeSelf);
-            //TODO: Display Cones
+            foreach(var tool in ToolPicker)
+            {
+                tool.SetActive(Menu.activeSelf);
+            }
 
             Menu.transform.position = spawnPos;
             Menu.transform.LookAt(2 * Menu.transform.position - cameraUser.transform.position);
+        }
+    }
+
+    private void AddDefaultTool()
+    {
+        CurrentTool = "Grab";
+        gameObject.AddComponent<GrabTool>();
+        newMat = Resources.Load("Materials/Tools/GrabHand", typeof(Material)) as Material;
+        if (gameObject.transform.GetChild(0).transform.Find("trackpad") != null)
+        {
+            gameObject.transform.GetChild(0).transform.Find("trackpad").gameObject.GetComponent<Renderer>().material = newMat;
         }
     }
 }

@@ -17,7 +17,7 @@ using UnityEngine;
         // Start is called before the first frame update
         void Awake()
         {
-            Debug.Log("Awake "+ SynchronizedChildTransform.Count);
+            //Debug.Log("Awake "+ SynchronizedChildTransform.Count);
             localPositionList = new List<Vector3>(SynchronizedChildTransform.Count);
             for (int i = 0; i < SynchronizedChildTransform.Count; i++)
             {

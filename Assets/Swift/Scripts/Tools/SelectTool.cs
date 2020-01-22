@@ -5,9 +5,7 @@ using Valve.VR;
 
 public class SelectTool : MonoBehaviour
 {    
-    private string currentTool;
     private Material newMat;
-    private bool isMenuActive;
 
     void Start()
     {
@@ -16,71 +14,76 @@ public class SelectTool : MonoBehaviour
 
     void Update()
     {
+
     }
 
-    void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.GetComponent<ToolManager>() != null)
+        if (other.gameObject.tag == "Tool")
         {
-            currentTool = other.gameObject.GetComponent<ToolManager>().CurrentTool;
-
-            switch (currentTool)
+            switch (gameObject.transform.parent.gameObject.GetComponent<ToolManager>().CurrentTool)
             {
                 case "Grab":
-                    Destroy(other.gameObject.GetComponent<GrabTool>());
+                    Destroy(gameObject.transform.parent.gameObject.GetComponent<GrabTool>());
                     break;
                 case "TopView":
-                    Destroy(other.gameObject.GetComponent<TopviewTool>());
+                    Destroy(gameObject.transform.parent.gameObject.GetComponent<TopviewTool>());
                     break;
                 case "Snap":
-                    Destroy(other.gameObject.GetComponent<SnapTool>());
+                    Destroy(gameObject.transform.parent.gameObject.GetComponent<SnapTool>());
                     break;
                 case "SaveConfig":
-                    Destroy(other.gameObject.GetComponent<ConfigTool>());
+                    Destroy(gameObject.transform.parent.gameObject.GetComponent<ConfigTool>());
                     break;
                 case "LoadConfig":
-                    Destroy(other.gameObject.GetComponent<ConfigTool>());
+                    Destroy(gameObject.transform.parent.gameObject.GetComponent<ConfigTool>());
                     break;
                 case "FlowPath":
-                    Destroy(other.gameObject.GetComponent<FlowPathTool>());
+                    Destroy(gameObject.transform.parent.gameObject.GetComponent<FlowPathTool>());
                     break;
             }
+            AddTool(other.gameObject.name);
+        }
+    }
 
-            switch (gameObject.name)
-            {
-                case "Grab":
-                    other.gameObject.AddComponent<GrabTool>();
-                    other.gameObject.GetComponent<ToolManager>().CurrentTool = "Grab";
-                    newMat = Resources.Load("Materials/Tools/GrabHand", typeof(Material)) as Material;
-                    break;
-                case "TopView":
-                    other.gameObject.AddComponent<TopviewTool>();
-                    other.gameObject.GetComponent<ToolManager>().CurrentTool = "TopView";
-                    newMat = Resources.Load("Materials/Tools/TopViewHand", typeof(Material)) as Material;
-                    break;
-                case "Snap":
-                    other.gameObject.AddComponent<SnapTool>();
-                    other.gameObject.GetComponent<ToolManager>().CurrentTool = "Snap";
-                    newMat = Resources.Load("Materials/Tools/SnapHand", typeof(Material)) as Material;
-                    break;
-                case "SaveConfig":
-                    other.gameObject.AddComponent<ConfigTool>();
-                    other.gameObject.GetComponent<ToolManager>().CurrentTool = "SaveConfig";
-                    newMat = Resources.Load("Materials/Tools/SaveHand", typeof(Material)) as Material;
-                    break;
-                case "LoadConfig":
-                    other.gameObject.AddComponent<ConfigTool>();
-                    other.gameObject.GetComponent<ToolManager>().CurrentTool = "LoadConfig";
-                    newMat = Resources.Load("Materials/Tools/LoadHand", typeof(Material)) as Material;
-                    break;
-                case "FlowPath":
-                    other.gameObject.AddComponent<FlowPathTool>();
-                    other.gameObject.GetComponent<ToolManager>().CurrentTool = "FlowPath";
-                    newMat = Resources.Load("Materials/Tools/FlowPathHand", typeof(Material)) as Material;
-                    break;
-            }
-            if(other.gameObject.transform.GetChild(0).transform.Find("trackpad") != null)
-                other.gameObject.transform.GetChild(0).transform.Find("trackpad").gameObject.GetComponent<Renderer>().material = newMat;
+    private void AddTool(string tool)
+    {
+        switch (tool)
+        {
+            case "Grab":
+                gameObject.transform.parent.gameObject.AddComponent<GrabTool>();
+                gameObject.transform.parent.gameObject.GetComponent<ToolManager>().CurrentTool = "Grab";
+                newMat = Resources.Load("Materials/Tools/GrabHand", typeof(Material)) as Material;
+                break;
+            case "TopView":
+                gameObject.transform.parent.gameObject.AddComponent<TopviewTool>();
+                gameObject.transform.parent.gameObject.GetComponent<ToolManager>().CurrentTool = "TopView";
+                newMat = Resources.Load("Materials/Tools/TopViewHand", typeof(Material)) as Material;
+                break;
+            case "Snap":
+                gameObject.transform.parent.gameObject.AddComponent<SnapTool>();
+                gameObject.transform.parent.gameObject.GetComponent<ToolManager>().CurrentTool = "Snap";
+                newMat = Resources.Load("Materials/Tools/SnapHand", typeof(Material)) as Material;
+                break;
+            case "SaveConfig":
+                gameObject.transform.parent.gameObject.AddComponent<ConfigTool>();
+                gameObject.transform.parent.gameObject.GetComponent<ToolManager>().CurrentTool = "SaveConfig";
+                newMat = Resources.Load("Materials/Tools/SaveHand", typeof(Material)) as Material;
+                break;
+            case "LoadConfig":
+                gameObject.transform.parent.gameObject.AddComponent<ConfigTool>();
+                gameObject.transform.parent.gameObject.GetComponent<ToolManager>().CurrentTool = "LoadConfig";
+                newMat = Resources.Load("Materials/Tools/LoadHand", typeof(Material)) as Material;
+                break;
+            case "FlowPath":
+                gameObject.transform.parent.gameObject.AddComponent<FlowPathTool>();
+                gameObject.transform.parent.gameObject.GetComponent<ToolManager>().CurrentTool = "FlowPath";
+                newMat = Resources.Load("Materials/Tools/FlowPathHand", typeof(Material)) as Material;
+                break;
+        }
+        if (gameObject.transform.parent.transform.Find("Model").transform.Find("trackpad") != null)
+        {
+            gameObject.transform.parent.transform.Find("Model").transform.Find("trackpad").gameObject.GetComponent<Renderer>().material = newMat;
         }
     }
 }
