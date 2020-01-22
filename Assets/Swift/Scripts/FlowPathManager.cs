@@ -1,4 +1,6 @@
-﻿using Photon.Pun;
+﻿using ExitGames.Client.Photon;
+using Photon.Pun;
+using Photon.Realtime;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -9,14 +11,12 @@ public class FlowPathManager : MonoBehaviour, IPunInstantiateMagicCallback
     private List<GameObject> orderedObjects = new List<GameObject>();
     private Color materialColor;
     private GameObject flowPointEntry, flowPointExit;
+    private string instanceName = "";
 
     // Start is called before the first frame update
     void Start()
     {
-        /*object[] data = gameObject.GetComponent<PhotonView>().InstantiationData;
-        orderedObjects = (List<GameObject>) data[0];
-        material = (Material)data[1];
-        Debug.Log("FROM FLOWPATHMANAGER : " + orderedObjects.Count);*/
+        
     }
 
     // Update is called once per frame
@@ -79,16 +79,17 @@ public class FlowPathManager : MonoBehaviour, IPunInstantiateMagicCallback
     {
         object[] data = gameObject.GetComponent<PhotonView>().InstantiationData;
         ColorUtility.TryParseHtmlString(data[1].ToString(), out materialColor);
+        Debug.Log("INSTANTIATING : " + data[2].ToString());
+        gameObject.name = data[2].ToString();
+
+        string content = gameObject.name; // Array contains the target position and the IDs of the selected units
+        RaiseEventOptions raiseEventOptions = new RaiseEventOptions { Receivers = ReceiverGroup.All }; // You would have to set the Receivers to All in order to receive this event on the local client as well
+        SendOptions sendOptions = new SendOptions { Reliability = true };
+        PhotonNetwork.RaiseEvent(0, content, raiseEventOptions, sendOptions);
 
         foreach (string s in JsonConvert.DeserializeObject<List<string>>(data[0].ToString()))
         {
             orderedObjects.Add(GameObject.Find(s));
-        }
-
-        Debug.Log("ORDERED OBJECTS : " );
-        foreach(var g in orderedObjects)
-        {
-            Debug.Log(g.name + "\n");
         }
 
         AtInstantiation();

@@ -2,29 +2,58 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using System;
+using UnityEngine.Networking;
 
 public class ShowConfigs : MonoBehaviour
 {
     public GameObject ConfigPreview;
 
     private readonly string _SUBPATH = "/Swift/StreamingAssets/SavedLayout/";
+    private readonly string _IMAGESUBPATH = "/Swift/StreamingAssets/SavedLayoutScreenshots/";
 
     // Start is called before the first frame update
     void Start()
     {
+    
+    }
+
+    private void OnEnable()
+    {
+        UpdateConfigs();
+    }
+
+    public void UpdateConfigs()
+    {
         var path = new DirectoryInfo(Application.dataPath + _SUBPATH);
         var configFiles = path.GetFiles();
+        foreach (Transform child in gameObject.transform)
+        {
+            GameObject.Destroy(child.gameObject);
+        }
         foreach (FileInfo file in configFiles)
         {
-            if(!file.Name.Contains(".meta"))
+            if (!file.Name.Contains(".meta"))
             {
                 GameObject newConfig = Instantiate(ConfigPreview, gameObject.transform);
-                newConfig.GetComponentInChildren<UnityEngine.UI.Text>().text = file.Name.Replace(".json","");
-                var imagePath = "";//GetPreviewImage(path + file.Name);
-                if (imagePath != "")
+                newConfig.GetComponentInChildren<UnityEngine.UI.Text>().text = file.Name.Replace(".json", "");
+                Debug.Log(path + file.Name);
+                var url = Application.dataPath + _IMAGESUBPATH + file.Name.Replace(".json", ".png").Replace("Swift", "Screen");
+                Debug.Log("URL TA RACE : " + url);
+                //Application.dataPath + "/Swift/StreamingAssets/SavedLayoutScreenshots/" + file.Name.Replace(".json", ".png");
+                //var fileImage = new DirectoryInfo(Application.dataPath + "/Swift/StreamingAssets/SavedLayoutScreenshots/");
+                byte[] imgData;
+                Texture2D tex = new Texture2D(2, 2);
+
+                imgData = File.ReadAllBytes(url);
+
+                tex.LoadImage(imgData);
+                if (url != "")
                 {
-                    Texture imagePreview = Resources.Load(imagePath, typeof(Texture)) as Texture;
-                    newConfig.GetComponentInChildren<UnityEngine.UI.RawImage>().texture = imagePreview;
+                    //Texture2D tex = new Texture2D(2, 2);
+                    //tex.LoadImage(imagePath.bytes)
+                    //Texture2D imagePreview = Resources.Load<Texture2D>(imagePath);
+                    newConfig.GetComponentInChildren<UnityEngine.UI.RawImage>().texture = tex;
                 }
             }
         }
@@ -48,7 +77,9 @@ public class ShowConfigs : MonoBehaviour
     {
         if (File.Exists(filepath))
         {
+            Debug.Log("File exist");
             string json = File.ReadAllText(filepath);
+            Debug.Log(json);
             Room room = JsonUtility.FromJson<Room>(json);
             return room.ImagePath;
         }

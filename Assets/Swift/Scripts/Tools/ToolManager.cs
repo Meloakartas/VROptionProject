@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Photon.Pun;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR;
@@ -21,7 +22,9 @@ public class ToolManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(SteamVR_Actions._default.MenuButton.GetStateDown(inputSource))
+        if (!gameObject.transform.parent.GetComponent<PhotonView>().IsMine) return;
+
+        if (SteamVR_Actions._default.MenuButton.GetStateDown(inputSource))
         {
             Vector3 playerPos = cameraUser.transform.position;
             Vector3 playerDirection = cameraUser.transform.forward;

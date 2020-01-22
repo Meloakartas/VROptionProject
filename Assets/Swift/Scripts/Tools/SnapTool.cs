@@ -4,6 +4,7 @@ using UnityEngine;
 using System.Globalization;
 using System;
 using Valve.VR;
+using Photon.Pun;
 
 public class SnapTool : MonoBehaviour
 {
@@ -18,20 +19,30 @@ public class SnapTool : MonoBehaviour
 
     void Update()
     {
+        if (!gameObject.transform.parent.GetComponent<PhotonView>().IsMine) return;
+
         if (SteamVR_Actions._default.GrabPinch.GetStateDown(inputSource))
         {
-            coroutine = captureScreenshot();
+            coroutine = captureScreenshot(false);
             StartCoroutine(coroutine);
         }
     }
 
-    public IEnumerator captureScreenshot()
+    public IEnumerator captureScreenshot(bool isConfigPreview)
     {
         yield return new WaitForEndOfFrame();
 
         DateTime date = DateTime.Now;
         string filename = "Screen-" + date.Year + "-" + date.Month + "-" + date.Day + " " + date.Hour + "-" + date.Minute + "-" + date.Second + ".png";
-        path = Application.dataPath + "/Swift/StreamingAssets/Screenshots/" + filename;
+        if(isConfigPreview)
+        {
+            path = Application.dataPath + "/Swift/StreamingAssets/SavedLayoutScreenshots/" + filename;
+            //path = Application.dataPath + "/Swift/Resources/SavedLayoutScreenshots/" + filename;
+        }
+        else
+        {
+            path = Application.dataPath + "/Swift/StreamingAssets/Screenshots/" + filename;
+        }
 
         Texture2D screenImage = new Texture2D(Screen.width, Screen.height);
 

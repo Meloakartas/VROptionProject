@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Photon.Pun;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR;
@@ -20,6 +21,8 @@ public class FlowPathTool : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!gameObject.transform.parent.GetComponent<PhotonView>().IsMine) return;
+
         if (SteamVR_Actions._default.GrabPinch.GetStateDown(inputSource))
         {
             ShowConfigMenu();

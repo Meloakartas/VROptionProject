@@ -5,6 +5,7 @@ using System.IO;
 using System.Globalization;
 using System;
 using Valve.VR;
+using Photon.Pun;
 
 public class ConfigTool : MonoBehaviour
 {
@@ -25,6 +26,8 @@ public class ConfigTool : MonoBehaviour
     }
     void Update()
     {
+        if (!gameObject.transform.parent.GetComponent<PhotonView>().IsMine) return;
+
         if (SteamVR_Actions._default.GrabPinch.GetStateDown(inputSource) && gameObject.GetComponent<ToolManager>().CurrentTool == "SaveConfig")
         {
             Save();
@@ -50,6 +53,7 @@ public class ConfigTool : MonoBehaviour
         configMenu.transform.position = spawnPos;
         configMenu.transform.LookAt(2 * configMenu.transform.position - cameraUser.transform.position);
 
+        //configMenu.GetComponent<ShowConfigs>().UpdateConfigs();
         configMenu.SetActive(!configMenu.activeSelf);
     }
 
@@ -72,10 +76,10 @@ public class ConfigTool : MonoBehaviour
 
     public void Save()
     {
-        StartCoroutine(snapTool.captureScreenshot());
-        string imagePath = snapTool.path;
+        StartCoroutine(snapTool.captureScreenshot(true));
+        //string imagePath = snapTool.path;
         
-        Debug.Log(imagePath);
+        //Debug.Log(imagePath);
 
         Room room = new Room();
         List<Machine> machineList = new List<Machine>();
@@ -89,7 +93,7 @@ public class ConfigTool : MonoBehaviour
             machineList.Add(machine);
         }
         room.MachineList = machineList;
-        room.ImagePath = imagePath;
+        //room.ImagePath = imagePath;
 
         string json = JsonUtility.ToJson(room);
         string filename = formatFilenameWithDate();
